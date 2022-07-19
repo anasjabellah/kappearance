@@ -253,6 +253,7 @@
 
             <div class="container-xxl flex-grow-1 container-p-y">
               <h4 class="fw-bold py-3 mb-4"><span class="text-muted fw-light">Form/</span> Edit  Product</h4>
+              <a href="{{ url('/products') }}" class="btn btn-primary text-bg-dark mb-3">back</a>
 
               <!-- Basic Layout & Basic with Icons -->
 <div class="row">
@@ -267,37 +268,53 @@
          <div class="col-xxl">
             <div class="card p-5">
               <div class="card-header d-flex align-items-center justify-content-between">
-                
               </div>
               <div class="card-body">
-                <form>
+
+                <form action="{{ route('products.update', $Product->id ) }}" method="POST" enctype="multipart/form-data">
+                    @csrf
+                    @method('PUT')
+
+
+                    <input name="category_id" value="{{ $Product->category_id }}" type="hidden"/>
+
                     <div class="row mb-3">
-                        <label class="col-sm-2 col-form-label mb-3" for="basic-default-company">Product</label>
+                        <label class="col-sm-2 col-form-label mb-3" for="basic-default-company">image</label>
                         <div class="col-sm-10">
-                            <input class="form-control" type="file" id="formFile" />
+                            <input name="image" class="form-control" type="file" id="formFile" value="{{ $Product->image}}" />
+                        </div> 
+                    </div> 
+
+                    <div class="row mb-3">
+                        <label class="col-sm-2 col-form-label mb-3" for="basic-default-company">name</label>
+                        <div class="col-sm-10">
+                            <input name="name" class="form-control" type="text" id="formFile" value="{{ $Product->name}}" />
                         </div> 
                     </div> 
                   
                   <div class="row mb-3">
-                    <label class="col-sm-2 col-form-label" for="basic-default-message">Description</label>
+                    <label class="col-sm-2 col-form-label" for="basic-default-message">description</label>
                     <div class="col-sm-10">
                       <textarea
                         id="basic-default-message"
                         class="form-control"
                         placeholder="Enter description of the product"
-                      ></textarea>
+                        name="description"
+                      >{{ $Product->description }}</textarea>
                     </div>
                   </div>
                   <div class="row mb-3">
-                    <label class="col-sm-2 col-form-label" for="basic-default-email">Amount</label>
+                    <label class="col-sm-2 col-form-label" for="basic-default-email">discount price</label>
                     <div class="col-sm-10">
                       <div class="input-group input-group-merge">
                         <input
                           type="number"
                           id="basic-default-email"
                           class="form-control"
-                          placeholder="Enter ur amount"/>
-            
+                          placeholder="Enter ur amount" value="{{ $Product->discount_price }}"
+                          name="discount_price"
+                          />
+
                       </div>
                     </div>
                   </div>
@@ -310,6 +327,8 @@
                       class="form-control"
                       placeholder="Amount"
                       aria-label="Amount (to the nearest dollar)"
+                      value="{{ $Product->price }}"
+                      name="price"
                     />
                     <span class="input-group-text">.00</span>
                   </div>
@@ -323,13 +342,5 @@
               </div>
             </div>
           </div>
-      
-           
-           
-      
-          </form>
-        </div>
-      </div>
-    </div>
 
 @endsection

@@ -23,6 +23,35 @@ class productController extends Controller
 
     }
 
+
+    public function store(Request $request)
+    {
+        $request->validate([
+            'category_id' => 'required',
+            'name' => 'required',
+            'description' => 'required',
+            'image' => 'required|image|mimes:jpg,png,jpeg,gif,svg|max:2048',
+            'price' => 'required',
+            'discount_price' => 'required',
+        ]);
+
+        $input = $request->all();
+
+        if ($image = $request->file('image')) {
+            $destinationPath = 'images/';
+            $profileImage = date('YmdHis') . "." . $image->getClientOriginalExtension();
+            $image->move($destinationPath, $profileImage);
+            $input['image'] = "$profileImage";
+        }
+
+        Product::create($input);
+     
+        return redirect()->route('products.index')
+                ->with('success','Product has been created successfully.');
+    }
+
+
+
     public function show(Product $Product)
     {
         return view('products.show',compact('Product'));
@@ -32,6 +61,51 @@ class productController extends Controller
     public function edit(Product $Product)
     {
         return view('products.edit',compact('Product'));
+    }
+
+
+    //  update categories
+    public function update(Request $request, Product $Product)
+    {
+        $request->validate([
+            'category_id' => 'required',
+            'name' => 'required',
+            'description' => 'required',
+            'image' => 'required|image|mimes:jpg,png,jpeg,gif,svg|max:2048',
+            'price' => 'required',
+            'discount_price' => 'required',
+        ]);
+        
+
+        $input = $request->all();
+
+        if ($image = $request->file('image')) {
+            $destinationPath = 'images/';
+            $profileImage = date('YmdHis') . "." . $image->getClientOriginalExtension();
+            $image->move($destinationPath, $profileImage);
+            $input['image'] = "$profileImage";
+        } else {
+            unset($input['image']);
+        }
+
+        $Product->update($input);
+
+        return redirect()->route('products.index')
+                ->with('success','Category updated successfully');
+    }
+
+    
+
+
+        // 
+        // delet Category
+    // 
+    public function destroy(Product $Product)
+    {
+        $Product->delete();
+        
+        return redirect()->route('products.index')
+                ->with('success','product has been deleted successfully');
     }
 
 

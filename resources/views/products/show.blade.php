@@ -207,27 +207,26 @@
               </ul>
             </div>
           </nav>
-
           <!-- / Navbar -->
 
            <!-- Basic Bootstrap Table -->
            <div class="container-xxl flex-grow-1 container-p-y">
-            <h4 class="fw-bold py-3 mb-4"><span class="text-muted fw-light">Table /</span> Contact</h4>
-            <div class="card">
-              <h5 class="card-header"> Show Message </h5>
-              <div class=" text-nowrap">
-              <div class="card-content">
-            <div class="content p-5">
-                <p >Name : {{ $Product->name }}</p>
-                <p>Email: {{ $Product->description }}</p>
-                <p>Subject: {{ $Product->image }}</p>
-                <p>Phone: {{ $Product->price }}</p>
-                <p>Address: {{ $Product->discount_price }}</p>
-                <hr>
-                
-            </div>
-            
+           
 
+            <h4 class="fw-bold py-3 mb-4"><span class="text-muted fw-light">Table /</span> Product</h4>
+            <a href="{{ url('/products') }}" class="btn btn-primary text-bg-dark mb-3">back</a>
+            <div class="card">
+              <h5 class="card-header"> Show Product </h5>
+              <div class="content p-5">
+                <p><b>image :</b> {{ $Product->image }}</p>
+                <p><b>name :</b> {{ $Product->name }}</p>
+                <p><b>discount price : </b> {{ $Product->discount_price }}</p>
+                <p><b>price :</b> {{ $Product->price }}</p>
+                <p class="text-justify"><b>description :</b> {{ $Product->description }}</p>
+              </div>
+            </div>
+          </div>  
+        </div>
 @endsection
 
 
