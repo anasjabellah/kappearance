@@ -215,17 +215,15 @@
             <h4 class="fw-bold py-3 mb-4"><span class="text-muted fw-light">Table /</span> Contact</h4>
             <div class="card">
               <h5 class="card-header"> Show Message </h5>
-              <div class=" text-nowrap">
-              <div class="card-content">
-            <div class="content p-5">
+              <div class="content p-5">
                 <p >Name : {{ $Product->name }}</p>
-                <p>Email: {{ $Product->description }}</p>
                 <p>Subject: {{ $Product->image }}</p>
-                <p>Phone: {{ $Product->price }}</p>
                 <p>Address: {{ $Product->discount_price }}</p>
-                <hr>
-                
+                <p>Phone: {{ $Product->price }}</p>
+                <p class="text-justify">{{ $Product->description }}</p>
+              </div>
             </div>
+          </div>  
             
 
 @endsection
