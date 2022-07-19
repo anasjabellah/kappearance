@@ -270,13 +270,19 @@
                 
               </div>
               <div class="card-body">
-                <form>
 
+                @if(session('status'))
+                  <div class="alert alert-success mb-1 mt-1">
+                    {{ session('status') }}
+                  </div>
+                @endif
 
+                <form action="{{ route('products.store') }}" method="POST" enctype="multipart/form-data" >
+                @csrf
                     <div class="row mb-3">
                         <label class="col-sm-2 col-form-label mb-3" for="basic-default-company">image</label>
                         <div class="col-sm-10">
-                            <input class="form-control" type="file" id="formFile" />
+                            <input class="form-control" type="file" id="formFile" name="image" />
                         </div> 
                     </div> 
 
@@ -332,7 +338,7 @@
 
                         <label for="exampleFormControlSelect1" class="form-label">Example select</label>
 
-                        <select class="form-select" id="exampleFormControlSelect1" aria-label="Default select example">
+                        <select class="form-select" id="exampleFormControlSelect1" aria-label="Default select example" name="category_id" >
 
                                 <option selected>Open this select menu</option>
                             @foreach ($categories as $category)

@@ -211,7 +211,10 @@
 
            <!-- Basic Bootstrap Table -->
            <div class="container-xxl flex-grow-1 container-p-y">
+           
+
             <h4 class="fw-bold py-3 mb-4"><span class="text-muted fw-light">Table /</span> Product</h4>
+            <a href="{{ url('/products') }}" class="btn btn-primary text-bg-dark mb-3">back</a>
             <div class="card">
               <h5 class="card-header"> Show Product </h5>
               <div class="content p-5">
