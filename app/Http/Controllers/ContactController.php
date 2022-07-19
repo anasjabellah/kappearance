@@ -22,8 +22,7 @@ class ContactController extends Controller
 
     // show contact 
     public function show($id)
-    {    
-        
+    {     
         $where = array('id' => $id);
         $contact  = Contact::where($where)->first();
         return view('contact.show', compact('contact'));
