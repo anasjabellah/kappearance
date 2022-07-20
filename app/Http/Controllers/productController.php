@@ -11,6 +11,8 @@ class productController extends Controller
 
     public function index(Request $request)
     {
+        $data['categories'] = Category::orderBy('id','desc')->paginate(10);
+
         $data['products'] = Product::orderBy('id','desc')->paginate(10);
         return view('products.index', $data);
     }
@@ -46,6 +48,7 @@ class productController extends Controller
 
         Product::create($input);
      
+
         return redirect()->route('products.index')
                 ->with('success','Product has been created successfully.');
     }

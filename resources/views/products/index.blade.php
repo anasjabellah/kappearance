@@ -5,7 +5,7 @@
     <div class="layout-wrapper layout-content-navbar">
       <div class="layout-container">
 
-                <!-- Menu -->
+        <!-- Menu -->
         <aside id="layout-menu" class="layout-menu menu-vertical menu bg-menu-theme">
           <div class="app-brand demo">
             <a href="index.html" class="app-brand-link">
@@ -94,19 +94,19 @@
                     </a>
 
                     <ul class="menu-sub">
-
-                    {{-- <li class="menu-item" >
-                        <a href="/products/{{  $Category->id }}" class="menu-link">
+                    
+                    <li class="menu-item" >
+                        <a href="/products" class="menu-link">
                           <div data-i18n="Perfect Scrollbar">all products</div>
                         </a>
-                    </li> --}}
-                    {{-- @foreach ($categories as $Category)
+                    </li>
+                    @foreach ($categories as $Category)
                         <li class="menu-item">
                           <a href="/products/{{  $Category->id }}" class="menu-link">
                               <div data-i18n="Perfect Scrollbar">{{ $Category->name }}</div>
                           </a>
                         </li>
-                    @endforeach --}}
+                    @endforeach
                     </ul>
                 </li>
 

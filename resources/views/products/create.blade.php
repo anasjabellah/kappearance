@@ -3,8 +3,8 @@
     <!-- Layout wrapper -->
     <div class="layout-wrapper layout-content-navbar">
       <div class="layout-container">
+      
         <!-- Menu -->
-
         <aside id="layout-menu" class="layout-menu menu-vertical menu bg-menu-theme">
           <div class="app-brand demo">
             <a href="index.html" class="app-brand-link">
@@ -81,70 +81,71 @@
                 <div data-i18n="Analytics">Dashboard</div>
               </a>
             </li>
-
-            
-
-            <li class="menu-header small text-uppercase">
-              <span class="menu-header-text">Setting</span>
-            </li>
-            <li class="menu-item">
-              <a href="javascript:void(0);" class="menu-link menu-toggle">
-                <i class="menu-icon tf-icons bx bx-dock-top"></i>
-                <div data-i18n="Account Settings">Account Settings</div>
-              </a>
-              <ul class="menu-sub">
-                <li class="menu-item">
-                  <a href="pages-account-settings-account.html" class="menu-link">
-                    <div data-i18n="Account">Account</div>
-                  </a>
-                </li>
-               
-                </li>
-                <li class="menu-item">
-                  <a href="pages-account-settings-connections.html" class="menu-link">
-                    <div data-i18n="Connections">Connections</div>
-                  </a>
-                </li>
-              </ul>
-            </li>
-            
             
          
             <!-- Components -->
             <li class="menu-header small text-uppercase"><span class="menu-header-text">Managment</span></li>
-            <!-- Cards -->
-            <li class="menu-item">
-              <a href="javascript:void(0)" class="menu-link menu-toggle">
-                <i class="menu-icon tf-icons bx bx-copy"></i>
-                <div data-i18n="Extended UI">Product </div>
-              </a>
-              <ul class="menu-sub">
+                <!-- Cards -->
                 <li class="menu-item">
-                  <a href="extended-ui-perfect-scrollbar.html" class="menu-link">
-                    <div data-i18n="Perfect Scrollbar">Men</div>
-                  </a>
+                    <a href="javascript:void(0)" class="menu-link menu-toggle">
+                        <i class="menu-icon tf-icons bx bx-copy"></i>
+                        <div data-i18n="Extended UI">Product </div>
+                    </a>
+
+                    <ul class="menu-sub">
+
+                    {{-- <li class="menu-item" >
+                        <a href="/products/{{  $Category->id }}" class="menu-link">
+                          <div data-i18n="Perfect Scrollbar">all products</div>
+                        </a>
+                    </li> --}}
+                    {{-- @foreach ($categories as $Category)
+                        <li class="menu-item">
+                          <a href="/products/{{  $Category->id }}" class="menu-link">
+                              <div data-i18n="Perfect Scrollbar">{{ $Category->name }}</div>
+                          </a>
+                        </li>
+                    @endforeach --}}
+                    </ul>
                 </li>
+
+                <!-- Extended components -->
                 <li class="menu-item">
-                  <a href="extended-ui-text-divider.html" class="menu-link">
-                    <div data-i18n="Text Divider">Women</div>
-                  </a>
+                    <a href="{{ url('/Category') }}" class="menu-link">
+                        <i class="menu-icon tf-icons bx bx-collection"></i>
+                        <div data-i18n="Basic">Category</div>
+                    </a>
                 </li>
-              </ul>
-            </li>
 
-            <!-- Extended components -->
-            <li class="menu-item">
-              <a href="cards-basic.html" class="menu-link">
-                <i class="menu-icon tf-icons bx bx-collection"></i>
-                <div data-i18n="Basic">Category</div>
-              </a>
-            </li>
-            
 
-            
+                <!-- Extended components -->
+                <li class="menu-item">
+                    <a href="{{ url('/Orders') }}" class="menu-link">
+                        <i class="menu-icon tf-icons bx bx-collection"></i>
+                        <div data-i18n="Basic">Orders</div>
+                    </a>
+                </li>
+
+                <!-- Extended components -->
+                <li class="menu-item">
+                    <a href="{{ url('/Contect') }}" class="menu-link">
+                        <i class="menu-icon tf-icons bx bx-collection"></i>
+                        <div data-i18n="Basic">Contect</div>
+                    </a>
+                </li>
+
+
+                <!-- Extended components -->
+                <li class="menu-item">
+                    <a href="{{ url('/Settings') }}" class="menu-link">
+                        <i class="menu-icon tf-icons bx bx-collection"></i>
+                        <div data-i18n="Basic">Settings</div>
+                    </a>
+                </li>
           </ul>
         </aside>
         <!-- / Menu -->
+
         <!-- Layout container -->
         <div class="layout-page">
           <!-- Navbar -->
