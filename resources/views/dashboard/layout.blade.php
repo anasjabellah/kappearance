@@ -28,6 +28,8 @@
 
     <link rel="stylesheet" href="{{ asset('backEnd/assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.css') }}" />
 
+    <link rel="stylesheet" href="{{ asset('backEnd/assets/vendor/libs/apex-charts/apex-charts.css')}}" />
+
 
     <!-- Helpers -->
         <script src="{{ asset('backEnd/assets/vendor/js/helpers.js') }}"></script>
@@ -36,9 +38,7 @@
 </head>
 <body>
     
-    @yield('aside')
     @yield('content')
-
 
 
     <!-- Core JS -->

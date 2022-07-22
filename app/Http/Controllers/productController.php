@@ -111,6 +111,14 @@ class productController extends Controller
                 ->with('success','product has been deleted successfully');
     }
 
+    public function getProductsCategory($id)
+    {
+        $where = array('category_id' => $id);
+        $data['products']  = Product::orderBy('id','desc')->where($where)->paginate(10);
+
+        return view('products.getProducts', $data);
+    }
+
 
 
 }

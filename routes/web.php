@@ -10,3 +10,4 @@ Route::resource('/Category', CategoryController::class);
 Route::resource('/products', productController::class);
 Route::resource('/Contact', ContactController::class);
 Route::resource('/dashboard', dashboardController::class);
+Route::get('/Category/{id}/products', [productController::class, 'getProductsCategory']);
