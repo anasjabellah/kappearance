@@ -4,12 +4,14 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Setting;
+use App\Models\Category;
 
 class SettingController extends Controller
 {
 
     public function index()
     {
+        $data['categories'] = Category::orderBy('id','desc')->paginate(10);
         $data['settings'] = Setting::orderBy('id','desc')->paginate(12);
         return view('setting.index', $data);
     }
@@ -17,7 +19,8 @@ class SettingController extends Controller
 
      public function edit(Setting $setting)
     {
-        return view('setting.index',compact('setting'));
+        $data['categories'] = Category::orderBy('id','desc')->paginate(10);
+        return view('setting.index',compact('setting'),$data);
     }
 
 

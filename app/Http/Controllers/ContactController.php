@@ -4,20 +4,17 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Contact;
+use App\Models\Category;
 
 class ContactController extends Controller
 {
     public function index()
     {
+        $data['categories'] = Category::orderBy('id','desc')->paginate(10);
         $data['contacts'] = Contact::orderBy('id','desc')->paginate(12);
         return view('contact.index', $data);
     }
 
-
-    public function create()
-    {
-        //
-    }
 
 
     // show contact 
@@ -25,23 +22,14 @@ class ContactController extends Controller
     {     
         $where = array('id' => $id);
         $contact  = Contact::where($where)->first();
-        return view('contact.show', compact('contact'));
+
+        $data['categories'] = Category::orderBy('id','desc')->paginate(10);
+        return view('contact.show', compact('contact'), $data);
     }
     
 
-    public function edit($id)
-    {
-        //
-    }
 
-
-    public function update(Request $request, $id)
-    {
-        //
-    }
-
-
-         // delet Contact
+    // delet Contact
     // 
     public function destroy(Contact $Contact)
     {

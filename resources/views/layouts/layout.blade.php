@@ -163,7 +163,7 @@
       
                       <!-- Extended components -->
                       <li class="menu-item">
-                          <a href="{{ url('/Contect') }}" class="menu-link">
+                          <a href="{{ url('/Contact') }}" class="menu-link">
                               <i class="menu-icon tf-icons bx bx-collection"></i>
                               <div data-i18n="Basic">Contect</div>
                           </a>
@@ -172,7 +172,7 @@
       
                       <!-- Extended components -->
                       <li class="menu-item">
-                          <a href="{{ url('/Settings') }}" class="menu-link">
+                          <a href="{{ url('/Setting/3/edit') }}" class="menu-link">
                               <i class="menu-icon tf-icons bx bx-collection"></i>
                               <div data-i18n="Basic">Settings</div>
                           </a>
