@@ -77,7 +77,7 @@
           <ul class="menu-inner py-1">
             <!-- Dashboard -->
             <li class="menu-item active">
-              <a href="index.html" class="menu-link">
+              <a href="{{ url('/dashboard') }}" class="menu-link">
                 <i class="menu-icon tf-icons bx bx-home-circle"></i>
                 <div data-i18n="Analytics">Dashboard</div>
               </a>
@@ -289,7 +289,12 @@
                     </tbody>
                   </table>
 
-                  {!! $categories->links() !!}
+                  {{-- {!! $categories->links('vendor.pagination.custom') !!} --}}
+
+                  <div class="d-flex justify-content-center">
+                    {!! $categories->links() !!}
+                  </div>
+
                    
 
 @endsection

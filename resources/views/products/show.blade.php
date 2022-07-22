@@ -76,7 +76,7 @@
           <ul class="menu-inner py-1">
             <!-- Dashboard -->
             <li class="menu-item active">
-              <a href="index.html" class="menu-link">
+              <a href="{{ url('/dashboard') }}" class="menu-link">
                 <i class="menu-icon tf-icons bx bx-home-circle"></i>
                 <div data-i18n="Analytics">Dashboard</div>
               </a>
@@ -86,6 +86,29 @@
             <!-- Components -->
             <li class="menu-header small text-uppercase"><span class="menu-header-text">Managment</span></li>
                 <!-- Cards -->
+                <li class="menu-item">
+                    <a href="javascript:void(0)" class="menu-link menu-toggle">
+                        <i class="menu-icon tf-icons bx bx-copy"></i>
+                        <div data-i18n="Extended UI">Product </div>
+                    </a>
+
+                    <ul class="menu-sub">
+
+                    {{-- <li class="menu-item" >
+                        <a href="/products/{{  $Category->id }}" class="menu-link">
+                          <div data-i18n="Perfect Scrollbar">all products</div>
+                        </a>
+                    </li> --}}
+                    {{-- @foreach ($categories as $Category)
+                        <li class="menu-item">
+                          <a href="/products/{{  $Category->id }}" class="menu-link">
+                              <div data-i18n="Perfect Scrollbar">{{ $Category->name }}</div>
+                          </a>
+                        </li>
+                    @endforeach --}}
+                    </ul>
+                </li>
+
                 <!-- Extended components -->
                 <li class="menu-item">
                     <a href="{{ url('/Category') }}" class="menu-link">
@@ -105,9 +128,9 @@
 
                 <!-- Extended components -->
                 <li class="menu-item">
-                    <a href="{{ url('/Contact') }}" class="menu-link">
+                    <a href="{{ url('/Contect') }}" class="menu-link">
                         <i class="menu-icon tf-icons bx bx-collection"></i>
-                        <div data-i18n="Basic">Contact</div>
+                        <div data-i18n="Basic">Contect</div>
                     </a>
                 </li>
 

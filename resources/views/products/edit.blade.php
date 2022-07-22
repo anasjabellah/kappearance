@@ -4,7 +4,6 @@
     <div class="layout-wrapper layout-content-navbar">
       <div class="layout-container">
         <!-- Menu -->
-
         <aside id="layout-menu" class="layout-menu menu-vertical menu bg-menu-theme">
           <div class="app-brand demo">
             <a href="index.html" class="app-brand-link">
@@ -76,72 +75,72 @@
           <ul class="menu-inner py-1">
             <!-- Dashboard -->
             <li class="menu-item active">
-              <a href="index.html" class="menu-link">
+              <a href="{{ url('/dashboard') }}" class="menu-link">
                 <i class="menu-icon tf-icons bx bx-home-circle"></i>
                 <div data-i18n="Analytics">Dashboard</div>
               </a>
             </li>
-
-            
-
-            <li class="menu-header small text-uppercase">
-              <span class="menu-header-text">Setting</span>
-            </li>
-            <li class="menu-item">
-              <a href="javascript:void(0);" class="menu-link menu-toggle">
-                <i class="menu-icon tf-icons bx bx-dock-top"></i>
-                <div data-i18n="Account Settings">Account Settings</div>
-              </a>
-              <ul class="menu-sub">
-                <li class="menu-item">
-                  <a href="pages-account-settings-account.html" class="menu-link">
-                    <div data-i18n="Account">Account</div>
-                  </a>
-                </li>
-               
-                </li>
-                <li class="menu-item">
-                  <a href="pages-account-settings-connections.html" class="menu-link">
-                    <div data-i18n="Connections">Connections</div>
-                  </a>
-                </li>
-              </ul>
-            </li>
-            
             
          
             <!-- Components -->
             <li class="menu-header small text-uppercase"><span class="menu-header-text">Managment</span></li>
-            <!-- Cards -->
-            <li class="menu-item">
-              <a href="javascript:void(0)" class="menu-link menu-toggle">
-                <i class="menu-icon tf-icons bx bx-copy"></i>
-                <div data-i18n="Extended UI">Product </div>
-              </a>
-              <ul class="menu-sub">
+                <!-- Cards -->
                 <li class="menu-item">
-                  <a href="extended-ui-perfect-scrollbar.html" class="menu-link">
-                    <div data-i18n="Perfect Scrollbar">Men</div>
-                  </a>
+                    <a href="javascript:void(0)" class="menu-link menu-toggle">
+                        <i class="menu-icon tf-icons bx bx-copy"></i>
+                        <div data-i18n="Extended UI">Product </div>
+                    </a>
+
+                    <ul class="menu-sub">
+
+                    {{-- <li class="menu-item" >
+                        <a href="/products/{{  $Category->id }}" class="menu-link">
+                          <div data-i18n="Perfect Scrollbar">all products</div>
+                        </a>
+                    </li> --}}
+                    {{-- @foreach ($categories as $Category)
+                        <li class="menu-item">
+                          <a href="/products/{{  $Category->id }}" class="menu-link">
+                              <div data-i18n="Perfect Scrollbar">{{ $Category->name }}</div>
+                          </a>
+                        </li>
+                    @endforeach --}}
+                    </ul>
                 </li>
+
+                <!-- Extended components -->
                 <li class="menu-item">
-                  <a href="extended-ui-text-divider.html" class="menu-link">
-                    <div data-i18n="Text Divider">Women</div>
-                  </a>
+                    <a href="{{ url('/Category') }}" class="menu-link">
+                        <i class="menu-icon tf-icons bx bx-collection"></i>
+                        <div data-i18n="Basic">Category</div>
+                    </a>
                 </li>
-              </ul>
-            </li>
 
-            <!-- Extended components -->
-            <li class="menu-item">
-              <a href="cards-basic.html" class="menu-link">
-                <i class="menu-icon tf-icons bx bx-collection"></i>
-                <div data-i18n="Basic">Category</div>
-              </a>
-            </li>
-            
 
-            
+                <!-- Extended components -->
+                <li class="menu-item">
+                    <a href="{{ url('/Orders') }}" class="menu-link">
+                        <i class="menu-icon tf-icons bx bx-collection"></i>
+                        <div data-i18n="Basic">Orders</div>
+                    </a>
+                </li>
+
+                <!-- Extended components -->
+                <li class="menu-item">
+                    <a href="{{ url('/Contect') }}" class="menu-link">
+                        <i class="menu-icon tf-icons bx bx-collection"></i>
+                        <div data-i18n="Basic">Contect</div>
+                    </a>
+                </li>
+
+
+                <!-- Extended components -->
+                <li class="menu-item">
+                    <a href="{{ url('/Settings') }}" class="menu-link">
+                        <i class="menu-icon tf-icons bx bx-collection"></i>
+                        <div data-i18n="Basic">Settings</div>
+                    </a>
+                </li>
           </ul>
         </aside>
         <!-- / Menu -->
@@ -281,14 +280,17 @@
                     <div class="row mb-3">
                         <label class="col-sm-2 col-form-label mb-3" for="basic-default-company">image</label>
                         <div class="col-sm-10">
-                            <input name="image" class="form-control" type="file" id="formFile" value="{{ $Product->image}}" />
+                            <input name="image" value="{{ $Product->image }}" class="form-control" type="file"  />
                         </div> 
+                        <div class="form-group">
+                            <img src="{{ url('images', $Product->image ) }}" style="width: 100px; ">
+                        </div>
                     </div> 
 
                     <div class="row mb-3">
                         <label class="col-sm-2 col-form-label mb-3" for="basic-default-company">name</label>
                         <div class="col-sm-10">
-                            <input name="name" class="form-control" type="text" id="formFile" value="{{ $Product->name}}" />
+                            <input name="name" class="form-control" type="text" id="formFile" value="{{ $Product->name }}" />
                         </div> 
                     </div> 
                   
@@ -296,10 +298,10 @@
                     <label class="col-sm-2 col-form-label" for="basic-default-message">description</label>
                     <div class="col-sm-10">
                       <textarea
+                        name="description"
                         id="basic-default-message"
                         class="form-control"
                         placeholder="Enter description of the product"
-                        name="description"
                       >{{ $Product->description }}</textarea>
                     </div>
                   </div>
@@ -308,11 +310,11 @@
                     <div class="col-sm-10">
                       <div class="input-group input-group-merge">
                         <input
+                          name="discount_price"
                           type="number"
                           id="basic-default-email"
                           class="form-control"
                           placeholder="Enter ur amount" value="{{ $Product->discount_price }}"
-                          name="discount_price"
                           />
 
                       </div>
@@ -323,12 +325,12 @@
                     <label class="col-sm-2 col-form-label" for="basic-default-email">Price</label>
                     <span class="input-group-text">$</span>
                     <input
+                      name="price"
                       type="text"
                       class="form-control"
                       placeholder="Amount"
                       aria-label="Amount (to the nearest dollar)"
                       value="{{ $Product->price }}"
-                      name="price"
                     />
                     <span class="input-group-text">.00</span>
                   </div>
