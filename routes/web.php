@@ -8,9 +8,9 @@ use App\Http\Controllers\dashboardController ;
 use App\Http\Controllers\SettingController ;
 
 
-Route::resource('/Category', CategoryController::class);
-Route::resource('/products', productController::class);
-Route::resource('/Contact', ContactController::class);
-Route::resource('/dashboard', dashboardController::class);
-Route::get('/Category/{id}/products', [productController::class, 'getProductsCategory']);
-Route::resource('/Setting', SettingController::class);
+Route::resource('/backend/Category', CategoryController::class);
+Route::resource('/backend/products', productController::class);
+Route::resource('/backend/Contact', ContactController::class);
+Route::resource('/backend/dashboard', dashboardController::class);
+Route::get('/backend/Category/{id}/products', [productController::class, 'getProductsCategory']);
+Route::resource('/backend/Setting', SettingController::class);
