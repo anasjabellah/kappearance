@@ -1,6 +1,6 @@
-@extends('contact.layout')
+@extends('setting.layout')
 @section('content')
-<!-- Layout wrapper -->
+
 <div class="layout-wrapper layout-content-navbar">
       <div class="layout-container">
 
@@ -101,6 +101,8 @@
                       </a>
                     </li>
                    </ul >
+
+               
                 <li class="menu-item">
                     <a href="{{ url('/Category') }}" class="menu-link">
                         <i class="menu-icon tf-icons bx bx-collection"></i>
@@ -222,64 +224,5 @@
             </div>
           </nav>
 
-          <!-- / Navbar -->
 
-           <!-- Basic Bootstrap Table -->
-           <div class="container-xxl flex-grow-1 container-p-y">
-            <h4 class="fw-bold py-3 mb-4"><span class="text-muted fw-light">Table /</span> Contact</h4>
-
- <div class="card">
-              <h5 class="card-header"> Contact </h5>
-              <div class=" text-nowrap">
-                <table class="table">
-                  <thead>
-                    <tr>
-                      <th>Id</th>
-                      <th>Name</th>
-                      <th>Subject</th>
-                      <th>Address</th>
-                      <th>Email</th>
-                      <th>Phone</th>
-                    <th>Action</th>
-                    </tr>
-                  </thead>
-                  <tbody class="table-border-bottom-0">
-                  @foreach($contacts as $contact)
-                  <tr>
-                  <td>{{ $contact->id }}</td>
-                  <td>{{ $contact->name }}</td>
-                  <td>{{ $contact->subject }}</td>
-                  <td>{{ $contact->address }}</td>
-                  <td>{{ $contact->email }}</td>
-                  <td>{{ $contact->phone }}</td>
-                  
-                 
-                  <td>
-                        <div class="dropdown">
-                          <button type="button" class="btn p-0 dropdown-toggle hide-arrow" data-bs-toggle="dropdown">
-                            <i class="bx bx-dots-vertical-rounded"></i>
-                          </button>
-                          <div class="dropdown-menu">
-                          
-                          <form action="{{ route('Contact.destroy', $contact->id) }}" method="POST">
-                            
-                            <a  href=" {{ route('Contact.show', $contact->id) }}"class="dropdown-item"><i class='bx bx-show' ></i></i>  Show</a >
-                            @csrf
-                            @method('DELETE')
-                            <button type="submit" class="dropdown-item" ><i class="bx bx-trash me-1"></i>Delete</button>
-                            </form>
-                          </div>
-                          </div>
-                        </td>
-                    </tr>
-                    @endforeach
-                    </tbody>
-
-
-                  </table>
-
-                  <div>
-                  {!! $contacts->links() !!}  
-                  <div>
-                    
-@endsection
+          @endsection
