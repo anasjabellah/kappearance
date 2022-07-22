@@ -1,6 +1,6 @@
-@extends('contact.layout')
+@extends('setting.layout')
 @section('content')
-<!-- Layout wrapper -->
+
 <div class="layout-wrapper layout-content-navbar">
       <div class="layout-container">
 
@@ -76,7 +76,7 @@
           <ul class="menu-inner py-1">
             <!-- Dashboard -->
             <li class="menu-item active">
-              <a href="{{ url('/dashboard') }}" class="menu-link">
+              <a href="index.html" class="menu-link">
                 <i class="menu-icon tf-icons bx bx-home-circle"></i>
                 <div data-i18n="Analytics">Dashboard</div>
               </a>
@@ -87,6 +87,22 @@
             <li class="menu-header small text-uppercase"><span class="menu-header-text">Managment</span></li>
                 <!-- Cards -->
                 <!-- Extended components -->
+                <li class="menu-item">
+                    <a href="javascript:void(0)" class="menu-link menu-toggle">
+                        <i class="menu-icon tf-icons bx bx-copy"></i>
+                        <div data-i18n="Extended UI">Product </div>
+                    </a>
+
+                    <ul class="menu-sub">
+
+                    <li class="menu-item" >
+                      <a href="{{ url('products') }}" class="menu-link">
+                        <div data-i18n="Perfect Scrollbar">all products</div>
+                      </a>
+                    </li>
+                   </ul >
+
+               
                 <li class="menu-item">
                     <a href="{{ url('/Category') }}" class="menu-link">
                         <i class="menu-icon tf-icons bx bx-collection"></i>
@@ -208,30 +224,5 @@
             </div>
           </nav>
 
-          <!-- / Navbar -->
 
-           <!-- Basic Bootstrap Table -->
-           <div class="container-xxl flex-grow-1 container-p-y">
-            <h4 class="fw-bold py-3 mb-4"><span class="text-muted fw-light">Table /</span> Contact</h4>
-            <div class="card">
-              <h5 class="card-header"> Show Message </h5>
-               <div class="content p-5">
-                <p ><b>Name:</b> {{ $contact->name }}</p>
-                <p><b>Email:</b> {{ $contact->email }}</p>
-                <p><b>Subject:</b> {{ $contact->subject }}</p>
-                <p><b>Phone:</b> {{ $contact->phone }}</p>
-                <p><b>Address:</b> {{ $contact->address }}</p>
-                <p><b>Message:</b> {{ $contact->message }}</p>
-                
-                <hr>
-                
-              </div>
-            </div>
-          </div>
-          
-
-@endsection
-
-
-
-
+          @endsection
