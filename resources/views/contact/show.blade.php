@@ -215,20 +215,20 @@
             <h4 class="fw-bold py-3 mb-4"><span class="text-muted fw-light">Table /</span> Contact</h4>
             <div class="card">
               <h5 class="card-header"> Show Message </h5>
-              <div class=" text-nowrap">
-              <div class="card-content">
-            <div class="content p-5">
-                <p >Name : {{ $contact->name }}</p>
-                <p>Email: {{ $contact->email }}</p>
-                <p>Subject: {{ $contact->subject }}</p>
-                <p>Phone: {{ $contact->phone }}</p>
-                <p>Address: {{ $contact->address }}</p>
-                <p>Message: {{ $contact->message }}</p>
+               <div class="content p-5">
+                <p ><b>Name:</b> {{ $contact->name }}</p>
+                <p><b>Email:</b> {{ $contact->email }}</p>
+                <p><b>Subject:</b> {{ $contact->subject }}</p>
+                <p><b>Phone:</b> {{ $contact->phone }}</p>
+                <p><b>Address:</b> {{ $contact->address }}</p>
+                <p><b>Message:</b> {{ $contact->message }}</p>
                 
                 <hr>
                 
+              </div>
             </div>
-            
+          </div>
+          
 
 @endsection
 
