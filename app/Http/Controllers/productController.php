@@ -57,14 +57,18 @@ class productController extends Controller
 
     public function show(Product $Product)
     {
-        return view('products.show',compact('Product'));
+        $data['categories'] = Category::orderBy('id','desc')->paginate(10);
+        return view('products.show',compact('Product'), $data);
     }
 
 
     public function edit(Product $Product)
     {
-        return view('products.edit',compact('Product'));
+        $data['categories'] = Category::orderBy('id','desc')->paginate(10);
+        return view('products.edit',compact('Product'), $data);
     }
+
+
 
 
     //  update categories
@@ -114,10 +118,13 @@ class productController extends Controller
     public function getProductsCategory($id)
     {
         $where = array('category_id' => $id);
+        $data['categories'] = Category::orderBy('id','desc')->paginate(10);
         $data['products']  = Product::orderBy('id','desc')->where($where)->paginate(10);
 
         return view('products.getProducts', $data);
     }
+
+
 
 
 
