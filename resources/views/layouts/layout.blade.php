@@ -172,7 +172,7 @@
       
                       <!-- Extended components -->
                       <li class="menu-item">
-                          <a href="{{ url('/backend/Setting/3/edit') }}" class="menu-link">
+                          <a href="{{ url('/backend/Setting') }}" class="menu-link">
                               <i class="menu-icon tf-icons bx bx-collection"></i>
                               <div data-i18n="Basic">Settings</div>
                           </a>

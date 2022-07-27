@@ -114,6 +114,7 @@ class productController extends Controller
         return redirect()->route('products.index')
                 ->with('success','product has been deleted successfully');
     }
+    
 
     public function getProductsCategory($id)
     {

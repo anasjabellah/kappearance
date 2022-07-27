@@ -16,7 +16,8 @@ class CategoryController extends Controller
 
     public function create()
     {
-        return view('categories.create');
+        $data['categories'] = Category::orderBy('id','desc')->paginate(10);
+        return view('categories.create',$data);
     }
 
     public function store(Request $request)

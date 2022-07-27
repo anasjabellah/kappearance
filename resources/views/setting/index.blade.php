@@ -105,142 +105,20 @@
               
             </div>
               <div class="card-body">
-
-                @if(session('status'))
-                  <div class="alert alert-success mb-1 mt-1">
-                    {{ session('status') }}
-                  </div>
-                @endif
-
-                <form action="{{ route('Setting.store') }}" method="POST" enctype="multipart/form-data" >
-                @csrf
-                    <div class="row mb-3">
-                        <label  class="col-sm-2 col-form-label mb-3"  for="basic-default-company" >{{ $setting }}</label>
-                        <div class="col-sm-10">
-                            <input class="form-control" type="file" id="formFile" name="logo" value="{{ $setting->logo }}"/>
-                        </div> 
-                    </div> 
-
-
-                   <!-- <div class="row mb-3">
-                        <label class="col-sm-2 col-form-label mb-3" for="basic-default-company">Favicon</label>
-                        <div class="col-sm-10">
-                            <input class="form-control" type="file" id="formFile" name="favicon" />
-                        </div> 
-                    </div>-->
-                    
-                    <div class="row mb-3">
-                                    <label class="col-sm-2 col-form-label" for="basic-default-name" >Name</label>
-                                    <div class="col-sm-10">
-                                        <input type="text" class="form-control" id="basic-default-name" placeholder="Enter a Name " name="name" value="{{ $setting->name }}" />
-                                    </div>
-                                      @error('name')
-                                        <div class="alert alert-danger mt-1 mb-1">{{ $message }}</div>
-                                      @enderror
-                                </div>
-
-                                <div class="row mb-3">
-                                    <label class="col-sm-2 col-form-label" for="basic-default-name">Address</label>
-                                    <div class="col-sm-10">
-                                        <input type="text" class="form-control" id="basic-default-name" placeholder="Enter an Address " name="address" value="{{ $setting->address }}" />
-                                    </div>
-                                      @error('address')
-                                        <div class="alert alert-danger mt-1 mb-1">{{ $message }}</div>
-                                      @enderror
-                                </div>
-
-                                <div class="row mb-3 ">
-                        <label for="html5-tel-input" class="col-md-2 col-form-label" value="{{ $setting->phone }}">Phone</label>
-                        <div class="col-md-10">
-                          <input class="form-control" type="tel" placeholder="Enter Phone Number " id="html5-tel-input" />
-                        </div>
-                        @error('phone')
-                            <div class="alert alert-danger mt-1 mb-1">{{ $message }}</div>
-                         @enderror
-                      </div>
-
-                      
-                      <div class="mb-3 row">
-                        <label for="html5-email-input" class="col-md-2 col-form-label"value="{{ $setting->email }}">Email</label>
-                        <div class="col-md-10">
-                          <input class="form-control" type="email" placeholder="Enter an Email "id="html5-email-input" />
-                        </div>
-                        @error('email')
-                                        <div class="alert alert-danger mt-1 mb-1">{{ $message }}</div>
-                                      @enderror
-                      </div>
-
-                      <div class="row mb-3">
-                                    <label class="col-sm-2 col-form-label" for="basic-default-name"value="{{ $setting->description }}">Description</label>
-                                    <div class="col-sm-10">
-                                        <input type="text" class="form-control" id="basic-default-name" placeholder="Enter a Description " name="description" />
-                                    </div>
-                                      @error('description')
-                                        <div class="alert alert-danger mt-1 mb-1">{{ $message }}</div>
-                                      @enderror
-                                </div>
-
-
-                      <div class="mb-3 row">
-                        <label for="html5-url-input" class="col-md-2 col-form-label"value="{{ $setting->facebook }}">URL Facebook</label>
-                        <div class="col-md-10">
-                          <input
-                            class="form-control"
-                            type="url" id="html5-url-input"  placeholder="Enter a link " />
-                        </div>
-                        @error('facebook')
-                                        <div class="alert alert-danger mt-1 mb-1">{{ $message }}</div>
-                                      @enderror
-                        </div>
-
-
-                        <div class="mb-3 row">
-                        <label for="html5-url-input" class="col-md-2 col-form-label" value="{{ $setting->twitter }}">URL Twitter</label>
-                        <div class="col-md-10">
-                          <input
-                            class="form-control"
-                            type="url"  id="html5-url-input"  placeholder="Enter a link " />
-                        </div>
-                        @error('twitter')
-                                        <div class="alert alert-danger mt-1 mb-1">{{ $message }}</div>
-                                      @enderror
-                        </div>
-
-                        <div class="mb-3 row">
-                        <label for="html5-url-input" class="col-md-2 col-form-label"value="{{ $setting->instagram }}">URL Instagram</label>
-                        <div class="col-md-10">
-                          <input
-                            class="form-control"
-                            type="url"
-                       id="html5-url-input"  placeholder="Enter a link " />
-                        </div>
-                        @error('instagram')
-                                        <div class="alert alert-danger mt-1 mb-1">{{ $message }}</div>
-                                      @enderror
-                        </div>
-
-                        <div class="mb-3 row">
-                        <label for="html5-url-input" class="col-md-2 col-form-label"value="{{ $setting->youtube }}">URL Youtube</label>
-                        <div class="col-md-10">
-                          <input
-                            class="form-control"
-                            type="url"
-                           id="html5-url-input"  placeholder="Enter a link " />
-                        </div>
-                        @error('youtube')
-                                        <div class="alert alert-danger mt-1 mb-1">{{ $message }}</div>
-                                      @enderror
-                        </div>
-                        
-
-                        <div class="row justify-content-end">
-                    <div class="col-sm-10">
-                    <button type="submit" class="btn btn-primary me-2">Save changes</button>
-                          <button type="reset" class="btn btn-outline-secondary">Cancel</button>
-                    </div>
-                  </div>
-
-                </form>
+                @foreach ($settings as $setting)
+                    <p>{{ $setting->name }}</p>
+                    <p>{{ $setting->description }}</p>
+                    <p>{{ $setting->address }}</p>
+                    <p>{{ $setting->phone }}</p>
+                    <p>{{ $setting->email }}</p>
+                    <p>{{ $setting->logo }}</p>
+                    <p>{{ $setting->favicon }}</p>
+                    <p>{{ $setting->facebook }}</p>
+                    <p>{{ $setting->twitter }}</p>
+                    <p>{{ $setting->instagram }}</p>
+                    <p>{{ $setting->youtube }}</p>
+                    <a class="dropdown-item" href="{{ route('Setting.edit', $setting->id) }}"><i class="bx bx-edit-alt me-1"></i> Edit</a>
+                    @endforeach
               </div>
             </div>
           </div>
