@@ -7,6 +7,8 @@ use App\Http\Controllers\ContactController ;
 use App\Http\Controllers\dashboardController ;
 use App\Http\Controllers\SettingController ;
 use App\Http\Controllers\FrontHomeController ;
+use App\Http\Controllers\FrontAboutController ;
+use App\Http\Controllers\FrontContactController ;
 
 
 Route::resource('/backend/Category', CategoryController::class);
@@ -21,3 +23,5 @@ Route::get('/backend/Category/{id}/products', [productController::class, 'getPro
 Route::get('/', [FrontHomeController::class, 'index' , 'GetSetting']);
 Route::get('/Category/{id}/products', [FrontHomeController::class, 'getProductsCategory']);
 Route::get('/product/{id}', [FrontHomeController::class, 'getProduct']);
+Route::get('/about', [FrontAboutController::class, 'index']);
+Route::get('/Contact', [FrontContactController::class, 'index']);
