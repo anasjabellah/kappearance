@@ -1,6 +1,7 @@
 @extends('layouts.layout')
 @section('content')
 
+
         <!-- Layout container -->
         <div class="layout-page">
           <!-- Navbar -->
@@ -90,26 +91,63 @@
            <!-- Basic Bootstrap Table -->
            <div class="container-xxl flex-grow-1 container-p-y">
             <h4 class="fw-bold py-3 mb-4"><span class="text-muted fw-light">Table /</span> Contact</h4>
-            <div class="card">
-              <h5 class="card-header"> Show Message </h5>
-               <div class="content p-5">
-                <p ><b>Name:</b> {{ $contact->name }}</p>
-                <p><b>Email:</b> {{ $contact->email }}</p>
-                <p><b>Subject:</b> {{ $contact->subject }}</p>
-                <p><b>Phone:</b> {{ $contact->phone }}</p>
-                <p><b>Address:</b> {{ $contact->address }}</p>
-                <p><b>Message:</b> {{ $contact->message }}</p>
-                
-                <hr>
-                
+
+             <div class="card">
+              <h5 class="card-header"> Contact </h5>
+              <div class=" text-nowrap">
+                <table class="table">
+                  <thead>
+                    <tr>
+                      <th>Id</th>
+                      <th>Name</th>
+                      <th>Email</th>
+                      <th>Price</th>
+                      <th>Phone</th>
+                      <th>Action</th>
+                    </tr>
+                  </thead>
+                  <tbody class="table-border-bottom-0">
+                  @foreach($orders as $order)
+                  <tr>
+                  <td>{{ $order->id }}</td>
+                  <td>{{ $order->name }}</td>
+                  <td>{{ $order->email }}</td>
+                  <td>$ {{ $order->total_price }}</td>
+                  <td>{{ $order->phone }}</td>
+                  
+                 
+                  <td>
+                        <div class="dropdown">
+                          <button type="button" class="btn p-0 dropdown-toggle hide-arrow" data-bs-toggle="dropdown">
+                            <i class="bx bx-dots-vertical-rounded"></i>
+                          </button>
+                          <div class="dropdown-menu">
+                          
+                          <form action="{{ route('order.destroy', $order->id) }}" method="POST">
+                            
+                            <a  href=" {{ route('order.show', $order->id) }}"class="dropdown-item"><i class='bx bx-show' ></i></i>  Show</a >
+                            @csrf
+                            @method('DELETE')
+                            <button type="submit" class="dropdown-item" ><i class="bx bx-trash me-1"></i>Delete</button>
+                            </form>
+                          </div>
+                          </div>
+                        </td>
+                    </tr>
+                    @endforeach
+                    </tbody>
+
+
+                  </table>
+
+                  <div>
+                  {!! $orders->links() !!}  
+                  <div>
+                  </div>
               </div>
             </div>
           </div>
         </div>
-          
-
+      </div>   
+                    
 @endsection
-
-
-
-

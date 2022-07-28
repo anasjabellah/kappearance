@@ -155,7 +155,7 @@
       
                       <!-- Extended components -->
                       <li class="menu-item">
-                          <a href="{{ url('/backend/Orders') }}" class="menu-link">
+                          <a href="{{ url('/backend/order') }}" class="menu-link">
                               <i class="menu-icon tf-icons bx bx-collection"></i>
                               <div data-i18n="Basic">Orders</div>
                           </a>

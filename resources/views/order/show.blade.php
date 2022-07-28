@@ -1,6 +1,7 @@
 @extends('layouts.layout')
 @section('content')
 
+
         <!-- Layout container -->
         <div class="layout-page">
           <!-- Navbar -->
@@ -89,23 +90,28 @@
 
            <!-- Basic Bootstrap Table -->
            <div class="container-xxl flex-grow-1 container-p-y">
-            <h4 class="fw-bold py-3 mb-4"><span class="text-muted fw-light">Table /</span> Contact</h4>
+            <h4 class="fw-bold py-3 mb-4"><span class="text-muted fw-light">Table /</span> Order</h4>
             <div class="card">
-              <h5 class="card-header"> Show Message </h5>
+              <h5 class="card-header"> Show order </h5>
                <div class="content p-5">
-                <p ><b>Name:</b> {{ $contact->name }}</p>
-                <p><b>Email:</b> {{ $contact->email }}</p>
-                <p><b>Subject:</b> {{ $contact->subject }}</p>
-                <p><b>Phone:</b> {{ $contact->phone }}</p>
-                <p><b>Address:</b> {{ $contact->address }}</p>
-                <p><b>Message:</b> {{ $contact->message }}</p>
+                <p ><b>Name:</b> {{ $orderUser }}</p>
+                <p><b>Email:</b> {{ $orderProduct }}</p>
+                <p><b>Subject:</b> {{ $Order->total_price }}</p>
+                <p><b>Phone:</b> {{ $Order->adress }}</p>
+                <p><b>Address:</b> {{ $Order->phone }}</p>
+                <p><b>Message:</b> {{ $Order->email }}</p>
+                <p><b>Subject:</b> {{ $Order->name }}</p>
+                <p><b>Phone:</b> {{ $Order->city }}</p>
+                <p><b>Address:</b> {{ $Order->postal_code }}</p>
+                <p><b>Message:</b> {{ $Order->country }}</p>
                 
                 <hr>
                 
               </div>
             </div>
-          </div>
         </div>
+    </div>
+        
           
 
 @endsection

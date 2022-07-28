@@ -183,8 +183,6 @@
                           <tr>
                             <th>image</th>
                             <th>name</th>
-                            <th>price</th>
-                            <th>discount_price</th>
                             <th>Actions</th>
                           </tr>
                         </thead>
@@ -193,8 +191,6 @@
                           <tr>
                             <td><img src="{{ url('images', $product->image ) }}" style="width: 100px;"></td>
                             <td>{{ $product->name }}</td>
-                            <td>{{ $product->price }}</td>
-                            <td>{{ $product->discount_price }}</td>
                             <td>
                               <div class="dropdown">
                                 <button type="button" class="btn p-0 dropdown-toggle hide-arrow" data-bs-toggle="dropdown">

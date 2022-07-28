@@ -9,6 +9,7 @@ use App\Http\Controllers\SettingController ;
 use App\Http\Controllers\FrontHomeController ;
 use App\Http\Controllers\FrontAboutController ;
 use App\Http\Controllers\FrontContactController ;
+use App\Http\Controllers\OrderController ;
 
 
 Route::resource('/backend/Category', CategoryController::class);
@@ -16,6 +17,7 @@ Route::resource('/backend/products', productController::class);
 Route::resource('/backend/Contact', ContactController::class);
 Route::resource('/backend/dashboard', dashboardController::class);
 Route::resource('/backend/Setting', SettingController::class);
+Route::resource('/backend/order', OrderController::class);
 Route::get('/backend/Category/{id}/products', [productController::class, 'getProductsCategory']);
 
 // front end 
