@@ -48,51 +48,6 @@
 <body>
     <!-- Header Area start  -->
     <div class="header section">
-        <!-- Header Top Message Start -->
-        <div class="header-top section-fluid bg-black">
-            <div class="container">
-                <div class="row row-cols-lg-2 align-items-center">
-                    <!-- Header Top Message Start -->
-                    <div class="col text-center text-lg-left">
-                        <div class="header-top-massege">
-                        
-                        </div>
-                    </div>
-                    <!-- Header Top Message End -->
-                    <!-- Header Top Language Currency -->
-                    <div class="col d-none d-lg-block">
-                        <div class="header-top-set-lan-curr d-flex justify-content-end">
-                            <!-- Single Wedge Start -->
-                            <div class="header-top-curr dropdown">
-                                <button class="dropdown-toggle" data-bs-toggle="dropdown"> Language : (ENG) <i
-                                        class="ion-ios-arrow-down"></i></button>
-                                <ul class="dropdown-menu dropdown-menu-right">
-                                    <li><a class="dropdown-item" href="#">English</a></li>
-                                    <li><a class="dropdown-item" href="#">Italiano</a></li>
-                                    <li><a class="dropdown-item" href="#">Français</a></li>
-                                    <li><a class="dropdown-item" href="#">Filipino</a></li>
-                                </ul>
-                            </div>
-                            <!-- Single Wedge End -->
-                            <!-- Single Wedge Start -->
-                            <div class="header-top-curr dropdown">
-                                <button class="dropdown-toggle pr-0 border-0" data-bs-toggle="dropdown">Currency : (USD) <i
-                                        class="ion-ios-arrow-down"></i></button>
-                                <ul class="dropdown-menu dropdown-menu-right">
-                                    <li><a class="dropdown-item" href="#">USD $</a></li>
-                                    <li><a class="dropdown-item" href="#">EUR €</a></li>
-                                    <li><a class="dropdown-item" href="#">POUND £</a></li>
-                                    <li><a class="dropdown-item" href="#">FRANC ₣</a></li>
-                                </ul>
-                            </div>
-                            <!-- Single Wedge End -->
-                        </div>
-                    </div>
-                    <!-- Header Top Language Currency -->
-                </div>
-            </div>
-        </div>
-        <!-- Header Top  End -->
         <!-- Header Bottom  Start -->
         <div class="header-bottom d-none d-lg-block">
             <div class="container position-relative">
@@ -239,73 +194,6 @@
     </div>
     <!-- Header Area End  -->
 
-    <!-- OffCanvas Cart Start -->
-    <div id="offcanvas-cart" class="offcanvas offcanvas-cart">
-        <div class="inner">
-            <div class="head">
-                <span class="title">Cart</span>
-                <button class="offcanvas-close">×</button>
-            </div>
-            <div class="body customScroll">
-                <ul class="minicart-product-list">
-                    <li>
-                        <a href="single-product.html" class="image"><img src="assets/images/product-image/1.jpg" alt="Cart product Image"></a>
-                        <div class="content">
-                            <a href="single-product.html" class="title">Walnut Cutting Board</a>
-                            <span class="quantity-price">1 x <span class="amount">$91.86</span></span>
-                            <a href="#" class="remove">×</a>
-                        </div>
-                    </li>
-                    <li>
-                        <a href="single-product.html" class="image"><img src="assets/images/product-image/2.jpg" alt="Cart product Image"></a>
-                        <div class="content">
-                            <a href="single-product.html" class="title">Lucky Wooden Elephant</a>
-                            <span class="quantity-price">1 x <span class="amount">$453.28</span></span>
-                            <a href="#" class="remove">×</a>
-                        </div>
-                    </li>
-                    <li>
-                        <a href="single-product.html" class="image"><img src="assets/images/product-image/3.jpg" alt="Cart product Image"></a>
-                        <div class="content">
-                            <a href="single-product.html" class="title">Fish Cut Out Set</a>
-                            <span class="quantity-price">1 x <span class="amount">$87.34</span></span>
-                            <a href="#" class="remove">×</a>
-                        </div>
-                    </li>
-                </ul>
-            </div>
-            <div class="foot">
-                <div class="sub-total">
-                    <table class="table">
-                        <tbody>
-                            <tr>
-                                <td class="text-left">Sub-Total :</td>
-                                <td class="text-right">$523.30</td>
-                            </tr>
-                            <tr>
-                                <td class="text-left">Eco Tax (-2.00) :</td>
-                                <td class="text-right">$4.52</td>
-                            </tr>
-                            <tr>
-                                <td class="text-left">VAT (20%) :</td>
-                                <td class="text-right">$104.66</td>
-                            </tr>
-                            <tr>
-                                <td class="text-left">Total :</td>
-                                <td class="text-right theme-color">$632.48</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-                <div class="buttons">
-                    <a href="cart.html" class="btn btn-dark btn-hover-primary mb-6">view cart</a>
-                    <a href="checkout.html" class="btn btn-outline-dark current-btn">checkout</a>
-                </div>
-                <p class="minicart-message">Free Shipping on All Orders Over $100!</p>
-            </div>
-        </div>
-    </div>
-    <!-- OffCanvas Cart End -->
 
     <!-- OffCanvas Menu Start -->
     <div id="offcanvas-mobile-menu" class="offcanvas offcanvas-mobile-menu">
@@ -489,8 +377,7 @@
                 <div id="mapid" data-aos="fade-up" data-aos-delay="200">
                     <div class="mapouter">
                         <div class="gmap_canvas">
-                            <iframe id="gmap_canvas" src="https://maps.google.com/maps?q=121%20King%20St%2C%20Melbourne%20VIC%203000%2C%20Australia&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
-                            <a href="https://sites.google.com/view/maps-api-v2/mapv2"></a>
+                            <iframe id="gmap_canvas" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3441.266432204169!2d-9.515835345981335!3d30.400181813573973!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xdb3c9348acaf1ab%3A0x3bdfbcc4889e9ed2!2sKalenya%20-%20Agence%20de%20marketing%20digital!5e0!3m2!1sar!2sma!4v1658934183170!5m2!1sar!2sma" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                         </div>
                     </div>
                 </div>
@@ -504,8 +391,7 @@
                                 <span class="sub-title">Phone:</span>
                             </div>
                             <div class="contact-info-dec">
-                                <p><a href="tel:+012345678102">+012 345 678 102</a></p>
-                                <p><a href="tel:+012345678102">+012 345 678 102</a></p>
+                                <p><a href="tel:+012345678102">{{ $Setting->phone }}</a></p>
                             </div>
                         </div>
                         <div class="single-contact-info" data-aos="fade-up" data-aos-delay="200">
@@ -513,17 +399,15 @@
                                 <span class="sub-title">Email:</span>
                             </div>
                             <div class="contact-info-dec">
-                                <p><a href="mailto://urname@email.com">urname@email.com</a></p>
-                                <p><a href="mailto://urwebsitenaem.com">urwebsitenaem.com</a></p>
+                                <p><a href="mailto://urwebsitenaem.com">{{ $Setting->email }}</a></p>
                             </div>
                         </div>
                         <div class="single-contact-info" data-aos="fade-up" data-aos-delay="200">
-                            <div class="contact-info-inner">
-                                <span class="sub-title">Address:</span>
+                            <div class="contact-info-inner " style="margin-right: 10px">
+                                <span class="sub-title">Address: </span>
                             </div>
                             <div class="contact-info-dec">
-                                <p>Address goes here,</p>
-                                <p>street, Crossroad 123.</p>
+                                <p  class="ms-2"> {{ $Setting->address }}</p>
                             </div>
                         </div>
                         <div class="contact-social">
@@ -531,19 +415,19 @@
                             <div class="social-info" data-aos="fade-up" data-aos-delay="200">
                                 <ul class="d-flex">
                                     <li>
-                                        <a href="#"><i class="icon-social-facebook"></i></a>
+                                        <a href="{{ $Setting->facebook }}"><i class="icon-social-facebook"></i></a>
                                     </li>
                                     <li>
-                                        <a href="#"><i class="icon-social-twitter"></i></a>
+                                        <a href="{{ $Setting->twitter }}"><i class="icon-social-twitter"></i></a>
                                     </li>
                                     <li>
-                                        <a href="#"><i class="icon-social-youtube"></i></a>
+                                        <a href="{{ $Setting->youtube }}"><i class="icon-social-youtube"></i></a>
                                     </li>
                                     <li>
-                                        <a href="#"><i class="icon-social-google"></i></a>
+                                        <a href="{{ $Setting->google }}"><i class="icon-social-google"></i></a>
                                     </li>
                                     <li>
-                                        <a class="m-0" href="#"><i class="icon-social-instagram"></i></a>
+                                        <a class="m-0" href="{{ $Setting->instagram }}"><i class="icon-social-instagram"></i></a>
                                     </li>
                                 </ul>
                             </div>
@@ -553,24 +437,65 @@
                 <div class="col-lg-8 col-md-7 col-sm-12 col-xs-12">
                     <div class="contact-form">
                         <div class="contact-title mb-30">
-                            <h2 class="title" data-aos="fade-up" data-aos-delay="200">Get In Touch</h2>
+                            <h2 class="title">Get In Touch</h2>
                         </div>
-                        <form class="contact-form-style" id="contact-form" action="https://htmlmail.hasthemes.com/nazmul/mail.php" method="post">
+
+                        @if(session('status'))
+                        <div class="alert alert-success mb-1 mt-1">
+                            {{ session('status') }}
+                        </div>
+                      @endif
+
+                        <form class="contact-form-style" action="{{ route('Contact.store') }}" method="POST" enctype="multipart/form-data"  >
+                            @csrf
                             <div class="row">
-                                <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
+
+                                <div class="col-lg-6">
                                     <input name="name" placeholder="Name*" type="text" />
+                                    @error('name')
+                                       <div class="alert alert-danger mt-1 mb-1">{{ $message }}</div>
+                                    @enderror
                                 </div>
-                                <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
+
+                                <div class="col-lg-6">
                                     <input name="email" placeholder="Email*" type="email" />
+                                    @error('email')
+                                       <div class="alert alert-danger mt-1 mb-1">{{ $message }}</div>
+                                    @enderror
                                 </div>
-                                <div class="col-lg-12" data-aos="fade-up" data-aos-delay="200">
+
+                                <div class="col-lg-12">
+                                    <input name="address" placeholder="address*" type="text" />
+                                    @error('address')
+                                       <div class="alert alert-danger mt-1 mb-1">{{ $message }}</div>
+                                    @enderror
+                                </div>
+
+                                <div class="col-lg-12">
+                                    <input name="phone" placeholder="phone*" type="text" />
+                                    @error('phone')
+                                       <div class="alert alert-danger mt-1 mb-1">{{ $message }}</div>
+                                    @enderror
+                                </div>
+
+                                <div class="col-lg-12">
                                     <input name="subject" placeholder="Subject*" type="text" />
+                                    @error('subject')
+                                       <div class="alert alert-danger mt-1 mb-1">{{ $message }}</div>
+                                    @enderror
                                 </div>
-                                <div class="col-lg-12" data-aos="fade-up" data-aos-delay="200">
+
+                                <div class="col-lg-12">
                                     <textarea name="message" placeholder="Your Message*"></textarea>
-                                    <button class="btn btn-primary btn-hover-dark mt-4" data-aos="fade-up" data-aos-delay="200" type="submit">SEND</button>
+                                    @error('message')
+                                       <div class="alert alert-danger mt-1 mb-1">{{ $message }}</div>
+                                    @enderror
+
                                 </div>
+                                
                             </div>
+                            
+                            <button class="btn btn-primary btn-hover-dark mt-4" type="submit">SEND</button>
                         </form>
                         <p class="form-messege"></p>
                     </div>

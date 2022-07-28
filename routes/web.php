@@ -24,4 +24,4 @@ Route::get('/', [FrontHomeController::class, 'index' , 'GetSetting']);
 Route::get('/Category/{id}/products', [FrontHomeController::class, 'getProductsCategory']);
 Route::get('/product/{id}', [FrontHomeController::class, 'getProduct']);
 Route::get('/about', [FrontAboutController::class, 'index']);
-Route::get('/Contact', [FrontContactController::class, 'index']);
+Route::get('/Contact', [FrontContactController::class, 'index'])->name('Front.contact');
