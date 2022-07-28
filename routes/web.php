@@ -10,6 +10,7 @@ use App\Http\Controllers\FrontHomeController ;
 use App\Http\Controllers\FrontAboutController ;
 use App\Http\Controllers\FrontContactController ;
 use App\Http\Controllers\OrderController ;
+use App\Http\Controllers\checkoutController ;
 
 
 Route::resource('/backend/Category', CategoryController::class);
@@ -27,3 +28,4 @@ Route::get('/Category/{id}/products', [FrontHomeController::class, 'getProductsC
 Route::get('/product/{id}', [FrontHomeController::class, 'getProduct']);
 Route::get('/about', [FrontAboutController::class, 'index']);
 Route::get('/Contact', [FrontContactController::class, 'index'])->name('Front.contact');
+Route::get('/checkout/product/{id}', [checkoutController::class, 'index']);

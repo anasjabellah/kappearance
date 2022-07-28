@@ -94,16 +94,24 @@
             <div class="card">
               <h5 class="card-header"> Show order </h5>
                <div class="content p-5">
-                <p ><b>Name:</b> {{ $orderUser }}</p>
-                <p><b>Email:</b> {{ $orderProduct }}</p>
-                <p><b>Subject:</b> {{ $Order->total_price }}</p>
-                <p><b>Phone:</b> {{ $Order->adress }}</p>
-                <p><b>Address:</b> {{ $Order->phone }}</p>
-                <p><b>Message:</b> {{ $Order->email }}</p>
-                <p><b>Subject:</b> {{ $Order->name }}</p>
-                <p><b>Phone:</b> {{ $Order->city }}</p>
-                <p><b>Address:</b> {{ $Order->postal_code }}</p>
-                <p><b>Message:</b> {{ $Order->country }}</p>
+                <h2>1. Informations User</h2>
+                <p><b>Name : </b> {{ $orderUser[0]["name"] }}</p>
+                <p><b>Email : </b> {{ $orderUser[0]["email"] }}</p>
+
+                <h2>2. Informations Product</h2>
+                <p><b>Name Product: </b> {{ $orderProduct[0]["name"] }}</p>
+                <p><b>Price Product: </b> {{ $orderProduct[0]["price"] }}</p>
+                <p><img src="{{ url('images', $orderProduct[0]["image"] ) }} " width="100px" ></p>
+
+                <h2>3. Informations Order</h2>
+                <p><b>name: </b> {{ $Order->name }}</p>
+                <p><b>Price: </b> ${{ $Order->total_price }} </p>
+                <p><b>adress: </b> {{ $Order->adress }}</p>
+                <p><b>phone: </b> {{ $Order->phone }}</p>
+                <p><b>email: </b> {{ $Order->email }}</p>
+                <p><b>city: </b> {{ $Order->city }}</p>
+                <p><b>country: </b> {{ $Order->country }}</p>
+                <p><b>postal code: </b> {{ $Order->postal_code }}</p>
                 
                 <hr>
                 

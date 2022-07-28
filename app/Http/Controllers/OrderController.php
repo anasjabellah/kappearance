@@ -26,8 +26,8 @@ class OrderController extends Controller
         $Order  = Order::where($where)->first();
 
         $data['orderUser'] = Order::join('users', 'user_id', '=', 'users.id')->select('users.*')->get();
-
         $data['orderProduct'] = Order::join('products', 'product_id', '=', 'products.id')->select('products.*')->get();
+        
 
         $data['categories'] = Category::orderBy('id','desc')->paginate(10);
         

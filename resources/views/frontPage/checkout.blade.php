@@ -36,7 +36,7 @@
     </script>
 
 
-
+    <!-- Use the minified version files listed below for better performance and remove the files listed above -->
     <link rel="stylesheet" href="{{ asset('frontEnd/assets/css/vendor/vendor.min.css') }}" />
     <link rel="stylesheet" href="{{ asset('frontEnd/assets/css/plugins/plugins.min.css') }}" />
     <link rel="stylesheet" href="{{ asset('frontEnd/assets/css/style.min.css') }}" />
@@ -47,51 +47,6 @@
 <body>
     <!-- Header Area start  -->
     <div class="header section">
-        <!-- Header Top Message Start -->
-        <div class="header-top section-fluid bg-black">
-            <div class="container">
-                <div class="row row-cols-lg-2 align-items-center">
-                    <!-- Header Top Message Start -->
-                    <div class="col text-center text-lg-left">
-                        <div class="header-top-massege">
-                            <p>Default Welcome Message </p>
-                        </div>
-                    </div>
-                    <!-- Header Top Message End -->
-                    <!-- Header Top Language Currency -->
-                    <div class="col d-none d-lg-block">
-                        <div class="header-top-set-lan-curr d-flex justify-content-end">
-                            <!-- Single Wedge Start -->
-                            <div class="header-top-curr dropdown">
-                                <button class="dropdown-toggle" data-bs-toggle="dropdown"> Language : (ENG) <i
-                                        class="ion-ios-arrow-down"></i></button>
-                                <ul class="dropdown-menu dropdown-menu-right">
-                                    <li><a class="dropdown-item" href="#">English</a></li>
-                                    <li><a class="dropdown-item" href="#">Italiano</a></li>
-                                    <li><a class="dropdown-item" href="#">Français</a></li>
-                                    <li><a class="dropdown-item" href="#">Filipino</a></li>
-                                </ul>
-                            </div>
-                            <!-- Single Wedge End -->
-                            <!-- Single Wedge Start -->
-                            <div class="header-top-curr dropdown">
-                                <button class="dropdown-toggle pr-0 border-0" data-bs-toggle="dropdown">Currency : (USD) <i
-                                        class="ion-ios-arrow-down"></i></button>
-                                <ul class="dropdown-menu dropdown-menu-right">
-                                    <li><a class="dropdown-item" href="#">USD $</a></li>
-                                    <li><a class="dropdown-item" href="#">EUR €</a></li>
-                                    <li><a class="dropdown-item" href="#">POUND £</a></li>
-                                    <li><a class="dropdown-item" href="#">FRANC ₣</a></li>
-                                </ul>
-                            </div>
-                            <!-- Single Wedge End -->
-                        </div>
-                    </div>
-                    <!-- Header Top Language Currency -->
-                </div>
-            </div>
-        </div>
-        <!-- Header Top  End -->
         <!-- Header Bottom  Start -->
         <div class="header-bottom d-none d-lg-block">
             <div class="container position-relative">
@@ -194,6 +149,88 @@
             </div>
         </div>
         <!-- Header Bottom  End -->
+        <!-- Main Menu Start -->
+        <div class="bg-black d-none d-lg-block sticky-nav">
+            <div class="container position-relative">
+                <div class="row">
+                    <div class="col-md-12 align-self-center">
+                        <div class="main-menu">
+                            <ul>
+                                <li class="dropdown"><a href="#">Home <i class="ion-ios-arrow-down"></i></a>
+                                    <ul class="sub-menu">
+                                        <li><a href="index.html">Home 1</a></li>
+                                        <li><a href="index-2.html">Home 2</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="about.html">About us</a></li>
+                                <li class="dropdown position-static"><a href="#">Shop <i
+                                            class="ion-ios-arrow-down"></i></a>
+                                    <ul class="mega-menu d-block">
+                                        <li class="d-flex">
+                                            <ul class="d-block">
+                                                <li class="title"><a href="#">Shop Page</a></li>
+                                                <li><a href="shop-3-column.html">Shop 3 Column</a></li>
+                                                <li><a href="shop-4-column.html">Shop 4 Column</a></li>
+                                                <li><a href="shop-left-sidebar.html">Shop Left Sidebar</a></li>
+                                                <li><a href="shop-right-sidebar.html">Shop Right Sidebar</a></li>
+                                            </ul>
+                                        </li>
+                                        <li>
+
+                                            <ul class="menu-banner w-100">
+                                                <li>
+                                                    <a class="p-0" href="shop-left-sidebar.html"><img class="img-responsive w-100" src="assets/images/banner/3.jpg" alt=""></a>
+                                                </li>
+                                                <li>
+                                                    <a class="p-0" href="shop-left-sidebar.html"><img class="img-responsive w-100" src="assets/images/banner/4.jpg" alt=""></a>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="dropdown"><a href="#">Pages <i class="ion-ios-arrow-down"></i></a>
+                                    <ul class="sub-menu">
+                                        <li><a href="404.html">404 Page</a></li>
+                                        <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                                        <li><a href="faq.html">Faq Page</a></li>
+                                        <li><a href="coming-soon.html">Coming Soon Page</a></li>
+                                    </ul>
+                                </li>
+                                <li class="dropdown "><a href="#">Blog <i class="ion-ios-arrow-down"></i></a>
+                                    <ul class="sub-menu">
+                                        <li class="dropdown position-static"><a href="blog-grid-left-sidebar.html">Blog Grid
+                                            <i class="ion-ios-arrow-right"></i></a>
+                                            <ul class="sub-menu sub-menu-2">
+                                                <li><a href="blog-grid-left-sidebar.html">Blog Grid Left Sidebar</a></li>
+                                                <li><a href="blog-grid-right-sidebar.html">Blog Grid Right Sidebar</a></li>
+                                            </ul>
+                                        </li>
+                                        <li class="dropdown position-static"><a href="blog-list-left-sidebar.html">Blog List
+                                            <i class="ion-ios-arrow-right"></i></a>
+                                            <ul class="sub-menu sub-menu-2">
+                                                <li><a href="blog-list-left-sidebar.html">Blog List Left Sidebar</a></li>
+                                                <li><a href="blog-list-right-sidebar.html">Blog List Right Sidebar</a></li>
+                                            </ul>
+                                        </li>
+                                        <li class="dropdown position-static"><a href="blog-single-left-sidebar.html">Single
+                                            Blog <i class="ion-ios-arrow-right"></i></a>
+                                            <ul class="sub-menu sub-menu-2">
+                                                <li><a href="blog-single-left-sidebar.html">Single Blog Left Sidebar</a>
+                                                </li>
+                                                <li><a href="blog-single-right-sidebar.html">Single Blog Right Sidebar</a>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li><a href="contact.html">Contact us</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Main Menu End -->
     </div>
     <!-- Header Area End  -->
 
@@ -265,6 +302,95 @@
     </div>
     <!-- OffCanvas Cart End -->
 
+    <!-- OffCanvas Menu Start -->
+    <div id="offcanvas-mobile-menu" class="offcanvas offcanvas-mobile-menu">
+        <button class="offcanvas-close"></button>
+        <div class="inner customScroll">
+
+            <div class="offcanvas-menu mb-4">
+                <ul>
+                    <li><a href="#"><span class="menu-text">Home</span></a>
+                        <ul class="sub-menu">
+                            <li><a href="index.html"><span class="menu-text">Home 1</span></a></li>
+                            <li><a href="index-2.html"><span class="menu-text">Home 2</span></a></li>
+                        </ul>
+                    </li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="#"><span class="menu-text">Shop</span></a>
+                        <ul class="sub-menu">
+                            <li>
+                                <a href="#"><span class="menu-text">Shop Page</span></a>
+                                <ul class="sub-menu">
+                                    <li><a href="shop-3-column.html">Shop 3 Column</a></li>
+                                    <li><a href="shop-4-column.html">Shop 4 Column</a></li>
+                                    <li><a href="shop-left-sidebar.html">Shop Grid Left Sidebar</a></li>
+                                    <li><a href="shop-right-sidebar.html">Shop Grid Right Sidebar</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#"><span class="menu-text">product Details Page</span></a>
+                                <ul class="sub-menu">
+                                    <li><a href="single-product.html">Product Single</a></li>
+                                    <li><a href="single-product-variable.html">Product Variable</a></li>
+                                    <li><a href="single-product-affiliate.html">Product Affiliate</a></li>
+                                    <li><a href="single-product-group.html">Product Group</a></li>
+                                    <li><a href="single-product-tabstyle-2.html">Product Tab 2</a></li>
+                                    <li><a href="single-product-tabstyle-3.html">Product Tab 3</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#"><span class="menu-text">Single Product Page</span></a>
+                                <ul class="sub-menu">
+                                    <li><a href="single-product-slider.html">Product Slider</a></li>
+                                    <li><a href="single-product-gallery-left.html">Product Gallery Left</a>
+                                    </li>
+                                    <li><a href="single-product-gallery-right.html">Product Gallery Right</a>
+                                    </li>
+                                    <li><a href="single-product-sticky-left.html">Product Sticky Left</a></li>
+                                    <li><a href="single-product-sticky-right.html">Product Sticky Right</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#"><span class="menu-text">Other Pages</span></a>
+                                <ul class="sub-menu">
+                                    <li><a href="cart.html">Cart Page</a></li>
+                                    <li><a href="checkout.html">Checkout Page</a></li>
+                                    <li><a href="compare.html">Compare Page</a></li>
+                                    <li><a href="wishlist.html">Wishlist Page</a></li>
+                                    <li><a href="my-account.html">Account Page</a></li>
+                                    <li><a href="login.html">Login & Register Page</a></li>
+                                    <li><a href="empty-cart.html">Empty Cart Page</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </div>
+            <!-- OffCanvas Menu End -->
+
+            <div class="offcanvas-social mt-auto">
+                <ul>
+                    <li>
+                        <a href="#"><i class="ion-social-facebook"></i></a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="ion-social-twitter"></i></a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="ion-social-google"></i></a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="ion-social-youtube"></i></a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="ion-social-instagram"></i></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- OffCanvas Menu End -->
 
 
     <div class="offcanvas-overlay"></div>
@@ -281,8 +407,7 @@
                             <!-- breadcrumb-list start -->
                             <ul class="breadcrumb-list text-center text-md-right">
                                 <li class="breadcrumb-item"><a href="index.html">Home</a></li>
-                                <li class="breadcrumb-item"><a href="shop-left-sidebar.html">Shop</a></li>
-                                <li class="breadcrumb-item active">Product Details</li>
+                                <li class="breadcrumb-item active">Checkout</li>
                             </ul>
                             <!-- breadcrumb-list end -->
                         </div>
@@ -294,168 +419,164 @@
 
     <!-- breadcrumb-area end -->
 
-    <!-- Product Details Area Start -->
-    <div class="product-details-area pt-100px pb-100px">
+    <!-- checkout area start -->
+    <div class="checkout-area pt-100px pb-100px">
         <div class="container">
             <div class="row">
-                <div class="col-lg-5 col-sm-12 col-xs-12 mb-lm-30px mb-md-30px mb-sm-30px">
-                    <!-- Swiper -->
-                    <div class="swiper-container zoom-top">
-                        <div class="swiper-wrapper">
-
-                            <div class="swiper-slide zoom-image-hover">
-                                <img class="img-responsive m-auto" src="{{ url('images', $product->image ) }}" alt="">
+                <div class="col-lg-7">
+                    <div class="billing-info-wrap">
+                        <h3>Billing Details</h3>
+                        <div class="row">
+                            <div class="col-lg-6 col-md-6">
+                                <div class="billing-info mb-4">
+                                    <label>First Name</label>
+                                    <input type="text" />
+                                </div>
                             </div>
-                        </div>
-                    </div>
-                    <div class="swiper-container zoom-thumbs slider-nav-style-1 small-nav mt-3 mb-3">
-                        <div class="swiper-wrapper">
-                            <div class="swiper-slide">
-                                <img class="img-responsive m-auto" src="{{ url('images', $product->image ) }}" alt="">
+                            <div class="col-lg-6 col-md-6">
+                                <div class="billing-info mb-4">
+                                    <label>Last Name</label>
+                                    <input type="text" />
+                                </div>
                             </div>
-                        </div>
-                        <!-- Add Arrows -->
-                        <div class="swiper-buttons">
-                            <div class="swiper-button-next"></div>
-                            <div class="swiper-button-prev"></div>
+                            <div class="col-lg-12">
+                                <div class="billing-info mb-4">
+                                    <label>Company Name</label>
+                                    <input type="text" />
+                                </div>
+                            </div>
+                            <div class="col-lg-12">
+                                <div class="billing-select mb-4">
+                                    <label>Country</label>
+                                    <select>
+                                        <option>Select a country</option>
+                                        <option>Azerbaijan</option>
+                                        <option>Bahamas</option>
+                                        <option>Bahrain</option>
+                                        <option>Bangladesh</option>
+                                        <option>Barbados</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-lg-12">
+                                <div class="billing-info mb-4">
+                                    <label>Street Address</label>
+                                    <input class="billing-address" placeholder="House number and street name" type="text" />
+                                </div>
+                            </div>
+                            <div class="col-lg-12">
+                                <div class="billing-info mb-4">
+                                    <label>Town / City</label>
+                                    <input type="text" />
+                                </div>
+                            </div>
+                            <div class="col-lg-6 col-md-6">
+                                <div class="billing-info mb-4">
+                                    <label>State / County</label>
+                                    <input type="text" />
+                                </div>
+                            </div>
+                            <div class="col-lg-6 col-md-6">
+                                <div class="billing-info mb-4">
+                                    <label>Postcode / ZIP</label>
+                                    <input type="text" />
+                                </div>
+                            </div>
+                            <div class="col-lg-6 col-md-6">
+                                <div class="billing-info mb-4">
+                                    <label>Phone</label>
+                                    <input type="text" />
+                                </div>
+                            </div>
+                            <div class="col-lg-6 col-md-6">
+                                <div class="billing-info mb-4">
+                                    <label>Email Address</label>
+                                    <input type="text" />
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-7 col-sm-12 col-xs-12" data-aos="fade-up">
-                    <div class="product-details-content quickview-content">
-                        <h2>{{ $product->name }}</h2>
-                        <div class="pricing-meta">
-                            <ul>
-                                <li class="old-price not-cut">$ {{ $product->price }}</li>
-                                <li class="old-price not-cut text-decoration-line-through mt-3 fs-5 text-black-50">$ {{ $product->discount_price}}</li>
-                            </ul>
-                        </div>
-                        <p class="quickview-para m-0">{{ $product->description}}</p>
-                        <div class="pro-details-quality">
-                            <div class="pro-details-cart">
-                                <a class="add-cart btn btn-primary btn-hover-primary" href="/checkout/product/{{ $product->id }}"> Buy Now</a>
+                <div class="col-lg-5 mt-md-30px mt-lm-30px ">
+                    <div class="your-order-area">
+                        <h3>Your order</h3>
+                        <div class="your-order-wrap gray-bg-4">
+                            <div class="your-order-product-info">
+                                <div class="your-order-top">
+                                    <ul>
+                                        <li>Product</li>
+                                        <li>Total</li>
+                                    </ul>
+                                </div>
+                                <div class="your-order-middle">
+                                    <ul>
+                                        <li><span class="order-middle-left">Product Name X 1</span> <span class="order-price">$ {{ $product->price }} </span></li>
+                                    </ul>
+                                </div>
+                                <div class="your-order-bottom">
+                                    <ul>
+                                        <li class="your-order-shipping">Shipping</li>
+                                        <li>Free shipping</li>
+                                    </ul>
+                                </div>
+                                <div class="your-order-total">
+                                    <ul>
+                                        <li class="order-total">Total</li>
+                                        <li>${{ $product->price }}</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="payment-method">
+                                <div class="payment-accordion element-mrg">
+                                    <div id="faq" class="panel-group">
+                                        <div class="panel panel-default single-my-account m-0">
+                                            <div class="panel-heading my-account-title">
+                                                <h4 class="panel-title"><a data-bs-toggle="collapse" href="#my-account-1" class="collapsed" aria-expanded="true">Direct bank transfer</a>
+                                                </h4>
+                                            </div>
+                                            <div id="my-account-1" class="panel-collapse collapse show" data-bs-parent="#faq">
+
+                                                <div class="panel-body">
+                                                    <p>Please send a check to Store Name, Store Street, Store Town, Store State / County, Store Postcode.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="panel panel-default single-my-account m-0">
+                                            <div class="panel-heading my-account-title">
+                                                <h4 class="panel-title"><a data-bs-toggle="collapse" href="#my-account-2" aria-expanded="false" class="collapsed">Check payments</a></h4>
+                                            </div>
+                                            <div id="my-account-2" class="panel-collapse collapse" data-bs-parent="#faq">
+
+                                                <div class="panel-body">
+                                                    <p>Please send a check to Store Name, Store Street, Store Town, Store State / County, Store Postcode.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="panel panel-default single-my-account m-0">
+                                            <div class="panel-heading my-account-title">
+                                                <h4 class="panel-title"><a data-bs-toggle="collapse" href="#my-account-3">Cash on delivery</a></h4>
+                                            </div>
+                                            <div id="my-account-3" class="panel-collapse collapse" data-bs-parent="#faq">
+
+                                                <div class="panel-body">
+                                                    <p>Please send a check to Store Name, Store Street, Store Town, Store State / County, Store Postcode.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                        <div class="pro-details-wish-com">
-                            <div class="pro-details-compare">
-                                <a href="compare.html"><i class="ion-ios-shuffle-strong"></i>Add to compare</a>
-                            </div>
-                        </div>
-                        <div class="pro-details-social-info">
-                            <span>Share</span>
-                            <div class="social-info">
-                                <ul class="d-flex">
-                                    <li>
-                                        <a href="#"><i class="ion-social-facebook"></i></a>
-                                    </li>
-                                    <li>
-                                        <a href="#"><i class="ion-social-twitter"></i></a>
-                                    </li>
-                                    <li>
-                                        <a href="#"><i class="ion-social-google"></i></a>
-                                    </li>
-                                    <li>
-                                        <a href="#"><i class="ion-social-instagram"></i></a>
-                                    </li>
-                                </ul>
-                            </div>
+                        <div class="Place-order mt-25">
+                            <a class="btn-hover" href="#">Place Order</a>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+    <!-- checkout area end -->
 
-
-    <!-- product details description area start -->
-    <div class="description-review-area pb-100px" data-aos="fade-up" data-aos-delay="200">
-        <div class="container">
-            <div class="description-review-wrapper">
-                <div class="description-review-topbar nav">
-                    <a data-bs-toggle="tab" href="#des-details1">Description</a>
-                    <a class="active" data-bs-toggle="tab" href="#des-details2">Product Details</a>
-                </div>
-                <div class="tab-content description-review-bottom">
-                    <div id="des-details2" class="tab-pane active">
-                        <div class="product-anotherinfo-wrapper">
-                            <ul>
-                                <li><span>Weight</span> 400 g</li>
-                                <li><span>Dimensions</span>10 x 10 x 15 cm</li>
-                                <li><span>Materials</span> 60% cotton, 40% polyester</li>
-                                <li><span>Other Info</span> American heirloom jean shorts pug seitan letterpress</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div id="des-details1" class="tab-pane">
-                        <div class="product-description-wrapper">
-                            <p>
-                                {{ $product->name}}
-                            </p>
-                            <p>
-                                {{ $product->description}}
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- product details description area end -->
-
-    <!-- New Product Start -->
-    <div class="section pb-100px" data-aos="fade-up" data-aos-delay="200">
-        <div class="container">
-            <!-- section title start -->
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="section-title text-left mb-11">
-                        <h2 class="title">Other Products In The Same Category:</h2>
-                    </div>
-                </div>
-            </div>
-            <!-- section title start -->
-            <div class="new-product-slider swiper-container slider-nav-style-1" data-aos="fade-up" data-aos-delay="200">
-                <div class="new-product-wrapper swiper-wrapper">
-                    <!-- Single Prodect -->
-                    @foreach ($products as $product)
-                    <div class="new-product-item swiper-slide">
-                        <div class="product">
-                            <div class="thumb">
-                                <a href="/product/{{ $product->id }}" class="image">
-                                    <img src="{{ url('images', $product->image ) }}" alt="" />
-                                    <img class="hover-image" src="{{ url('images', $product->image ) }}" alt="Product" />
-                                </a>
-                                <span class="badges">
-                                    <span class="sale">-10%</span>
-                                <span class="new">New</span>
-                                </span>
-                                <button title="Add To Cart" class=" add-to-cart">Add
-                                    To Cart</button>
-                            </div>
-                            <div class="content">
-                                <h5 class="title"><a href="/product/{{ $product->id }}">{{ $product->name }}</a></h5>
-                                <span class="price">
-                                    <span class="new">$ {{ $product->price }}</span>
-                                <span class="old">$ {{ $product->discount_price }}</span>
-                                </span>
-                            </div>
-                        </div>
-                    </div>
-                    @endforeach
-                    <!-- Single Prodect -->
-                </div>
-                <!-- Add Arrows -->
-                <div class="swiper-buttons">
-                    <div class="swiper-button-next"></div>
-                    <div class="swiper-button-prev"></div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- New Product End -->
-
-    <!-- New Product End -->
     <!-- Footer Area Start -->
     <div class="footer-area">
         <div class="footer-container">
@@ -575,142 +696,16 @@
 
 
 
-    <!-- Modal -->
-    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close"><span
-                            aria-hidden="true">x</span></button>
-                </div>
-                <div class="modal-body">
-                    <div class="row">
-                        <div class="col-md-5 col-sm-12 col-xs-12 mb-lm-30px mb-sm-30px">
-                            <!-- Swiper -->
-                            <div class="swiper-container gallery-top mb-4">
-                                <div class="swiper-wrapper">
-                                    <div class="swiper-slide">
-                                        <img class="img-responsive m-auto" src="assets/images/product-image/1.jpg" alt="">
-                                    </div>
-                                    <div class="swiper-slide">
-                                        <img class="img-responsive m-auto" src="assets/images/product-image/2.jpg" alt="">
-                                    </div>
-                                    <div class="swiper-slide">
-                                        <img class="img-responsive m-auto" src="assets/images/product-image/3.jpg" alt="">
-                                    </div>
-                                    <div class="swiper-slide">
-                                        <img class="img-responsive m-auto" src="assets/images/product-image/4.jpg" alt="">
-                                    </div>
-                                    <div class="swiper-slide">
-                                        <img class="img-responsive m-auto" src="assets/images/product-image/5.jpg" alt="">
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="swiper-container gallery-thumbs slider-nav-style-1 small-nav">
-                                <div class="swiper-wrapper">
-                                    <div class="swiper-slide">
-                                        <img class="img-responsive m-auto" src="assets/images/product-image/1.jpg" alt="">
-                                    </div>
-                                    <div class="swiper-slide">
-                                        <img class="img-responsive m-auto" src="assets/images/product-image/2.jpg" alt="">
-                                    </div>
-                                    <div class="swiper-slide">
-                                        <img class="img-responsive m-auto" src="assets/images/product-image/3.jpg" alt="">
-                                    </div>
-                                    <div class="swiper-slide">
-                                        <img class="img-responsive m-auto" src="assets/images/product-image/4.jpg" alt="">
-                                    </div>
-                                    <div class="swiper-slide">
-                                        <img class="img-responsive m-auto" src="assets/images/product-image/5.jpg" alt="">
-                                    </div>
-                                </div>
-                                <!-- Add Arrows -->
-                                <div class="swiper-buttons">
-                                    <div class="swiper-button-next"></div>
-                                    <div class="swiper-button-prev"></div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-7 col-sm-12 col-xs-12">
-                            <div class="product-details-content quickview-content">
-                                <h2>Originals Kaval Windbr</h2>
-                                <p class="reference">Reference:<span> demo_17</span></p>
-                                <div class="pro-details-rating-wrap">
-                                    <div class="rating-product">
-                                        <i class="ion-android-star"></i>
-                                        <i class="ion-android-star"></i>
-                                        <i class="ion-android-star"></i>
-                                        <i class="ion-android-star"></i>
-                                        <i class="ion-android-star"></i>
-                                    </div>
-                                    <span class="read-review"><a class="reviews" href="#">Read reviews (1)</a></span>
-                                </div>
-                                <div class="pricing-meta">
-                                    <ul>
-                                        <li class="old-price not-cut">$18.90</li>
-                                    </ul>
-                                </div>
-                                <p class="quickview-para">Lorem ipsum dolor sit amet, consectetur adipisic elit eiusm tempor incidid ut labore et dolore magna aliqua. Ut enim ad minim venialo quis nostrud exercitation ullamco</p>
-                                <div class="pro-details-size-color">
-                                    <div class="pro-details-color-wrap">
-                                        <span>Color</span>
-                                        <div class="pro-details-color-content">
-                                            <ul>
-                                                <li class="blue"></li>
-                                                <li class="maroon active"></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="pro-details-quality">
-                                    <div class="cart-plus-minus">
-                                        <input class="cart-plus-minus-box" type="text" name="qtybutton" value="1" />
-                                    </div>
-                                    <div class="pro-details-cart btn-hover">
-                                        <button class="add-cart btn btn-primary btn-hover-primary ml-4"> Add To
-                                            Cart</button>
-                                    </div>
-                                </div>
-                                <div class="pro-details-wish-com">
-                                    <div class="pro-details-wishlist">
-                                        <a href="wishlist.html"><i class="ion-android-favorite-outline"></i>Add to
-                                            wishlist</a>
-                                    </div>
-                                    <div class="pro-details-compare">
-                                        <a href="compare.html"><i class="ion-ios-shuffle-strong"></i>Add to compare</a>
-                                    </div>
-                                </div>
-                                <div class="pro-details-social-info">
-                                    <span>Share</span>
-                                    <div class="social-info">
-                                        <ul>
-                                            <li>
-                                                <a href="#"><i class="ion-social-facebook"></i></a>
-                                            </li>
-                                            <li>
-                                                <a href="#"><i class="ion-social-twitter"></i></a>
-                                            </li>
-                                            <li>
-                                                <a href="#"><i class="ion-social-google"></i></a>
-                                            </li>
-                                            <li>
-                                                <a href="#"><i class="ion-social-instagram"></i></a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
 
-    <!-- Modal end -->
+
+
+    {{-- script js --}}
     <script src="{{ asset('frontEnd/assets/js/vendor/vendor.min.js') }}"></script>
     <script src="{{ asset('frontEnd/assets/js/plugins/plugins.min.js') }}"></script>
     <script src="{{ asset('frontEnd/assets/js/main.js') }}"></script>
+    {{-- end script js  --}}
+
+
 </body>
 
 </html>
