@@ -14,7 +14,8 @@ class FrontAboutController extends Controller
 
     public function index(){
 
-        return view('frontPage.about');
+        $data['categories'] = Category::orderBy('id','desc')->paginate(10);
+        return view('frontPage.about' , $data);
 
     }
 

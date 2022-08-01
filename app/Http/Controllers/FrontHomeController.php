@@ -45,6 +45,7 @@ class FrontHomeController extends Controller
 
     public function getProduct($id){
 
+        $data['categories'] = Category::orderBy('id','desc')->paginate(10);
         $data['product']  = Product::where("id", $id)->first();
         $data['products']  = Product::orderBy('id','desc')->paginate(5);
 
