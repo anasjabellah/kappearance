@@ -183,8 +183,6 @@
                           <tr>
                             <th>image</th>
                             <th>name</th>
-                            <th>price</th>
-                            <th>discount_price</th>
                             <th>Actions</th>
                           </tr>
                         </thead>
@@ -193,8 +191,6 @@
                           <tr>
                             <td><img src="{{ url('images', $product->image ) }}" style="width: 100px;"></td>
                             <td>{{ $product->name }}</td>
-                            <td>{{ $product->price }}</td>
-                            <td>{{ $product->discount_price }}</td>
                             <td>
                               <div class="dropdown">
                                 <button type="button" class="btn p-0 dropdown-toggle hide-arrow" data-bs-toggle="dropdown">
@@ -224,7 +220,7 @@
                 <div class="col-4 col-md-8 col-lg-4 order-3 order-md-2">
                   <div class="row">
                     <div class="col-6 mb-4">
-                      <a href="{{ url('/products') }}">
+                      <a href="{{ url('/backend/order') }}">
                         <div class="card">
                           <div class="card-body">
                             <div class="card-title d-flex align-items-start justify-content-between">
@@ -232,8 +228,8 @@
                                 <img src="{{ url('backEnd\unicons\paypal.png') }}" alt="Credit Card" class="rounded" />
                               </div>
                             </div>
-                            <span class="d-block mb-1">Payments</span>
-                            <h3 class="card-title text-nowrap mb-2">$ {{ $sumPriceProduct }}</h3>
+                            <span class="d-block mb-1">Orders</span>
+                            <h3 class="card-title text-nowrap mb-2">{{ $getAllOrder }}</h3>
                           </div>
                         </div>
                       </a>

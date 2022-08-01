@@ -111,7 +111,7 @@
                 <ul class="menu-inner py-1">
                   <!-- Dashboard -->
                   <li class="menu-item active">
-                    <a href="{{ url('/dashboard') }}" class="menu-link">
+                    <a href="{{ url('/backend/dashboard') }}" class="menu-link">
                       <i class="menu-icon tf-icons bx bx-home-circle"></i>
                       <div data-i18n="Analytics">Dashboard</div>
                     </a>
@@ -130,13 +130,13 @@
                           <ul class="menu-sub">
       
                            <li class="menu-item" >
-                              <a href="{{ url('/products') }}" class="menu-link">
+                              <a href="{{ url('/backend/products') }}" class="menu-link">
                                 <div data-i18n="Perfect Scrollbar">all products</div>
                               </a>
                           </li>
                           @foreach ($categories as $Category)
                               <li class="menu-item">
-                                <a href="/Category/{{  $Category->id }}/products" class="menu-link">
+                                <a href="/backend/Category/{{  $Category->id }}/products" class="menu-link">
                                     <div data-i18n="Perfect Scrollbar">{{ $Category->name }}</div>
                                 </a>
                               </li>
@@ -146,7 +146,7 @@
       
                       <!-- Extended components --> 
                       <li class="menu-item">
-                          <a href="{{ url('/Category') }}" class="menu-link">
+                          <a href="{{ url('/backend/Category') }}" class="menu-link">
                               <i class="menu-icon tf-icons bx bx-collection"></i>
                               <div data-i18n="Basic">Category</div>
                           </a>
@@ -155,7 +155,7 @@
       
                       <!-- Extended components -->
                       <li class="menu-item">
-                          <a href="{{ url('/Orders') }}" class="menu-link">
+                          <a href="{{ url('/backend/order') }}" class="menu-link">
                               <i class="menu-icon tf-icons bx bx-collection"></i>
                               <div data-i18n="Basic">Orders</div>
                           </a>
@@ -163,7 +163,7 @@
       
                       <!-- Extended components -->
                       <li class="menu-item">
-                          <a href="{{ url('/Contact') }}" class="menu-link">
+                          <a href="{{ url('/backend/Contact') }}" class="menu-link">
                               <i class="menu-icon tf-icons bx bx-collection"></i>
                               <div data-i18n="Basic">Contect</div>
                           </a>
@@ -172,7 +172,7 @@
       
                       <!-- Extended components -->
                       <li class="menu-item">
-                          <a href="{{ url('/Setting/3/edit') }}" class="menu-link">
+                          <a href="{{ url('/backend/Setting') }}" class="menu-link">
                               <i class="menu-icon tf-icons bx bx-collection"></i>
                               <div data-i18n="Basic">Settings</div>
                           </a>

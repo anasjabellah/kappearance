@@ -17,10 +17,10 @@ class SettingController extends Controller
     }
 
 
-     public function edit(Setting $setting)
+    public function edit(Setting $setting)
     {
         $data['categories'] = Category::orderBy('id','desc')->paginate(10);
-        return view('setting.index',compact('setting'),$data);
+        return view('setting.edit',compact('setting'), $data);
     }
 
 
@@ -37,7 +37,7 @@ class SettingController extends Controller
                 'twitter' => 'required',
                 'instagram' => 'required',
                 'youtube' => 'required',
-             ]);
+            ]);
             
          
             $input = $request->all();
@@ -55,5 +55,8 @@ class SettingController extends Controller
         
             return redirect()->route('setting.index')->with('success','Element updated successfully');
         }
+
+
+    
 
 }

@@ -26,7 +26,16 @@ class ContactController extends Controller
         $data['categories'] = Category::orderBy('id','desc')->paginate(10);
         return view('contact.show', compact('contact'), $data);
     }
-    
+
+
+    public function store(Request $request)
+    {
+        $input = $request->all();
+        Contact::create($input);
+
+        return redirect()->route('Front.contact')
+                ->with('success','Product has been created successfully.');
+    }
 
 
     // delet Contact

@@ -9,14 +9,15 @@ class CategoryController extends Controller
 
     public function index()
     {
-        $data['categories'] = Category::orderBy('id','desc')->paginate(2);
+        $data['categories'] = Category::orderBy('id','desc')->paginate(10);
         return view('categories.index', $data);
     }
 
 
     public function create()
     {
-        return view('categories.create');
+        $data['categories'] = Category::orderBy('id','desc')->paginate(10);
+        return view('categories.create',$data);
     }
 
     public function store(Request $request)
@@ -44,13 +45,15 @@ class CategoryController extends Controller
 
     public function show(Category $Category)
     {
-        return view('categories.show',compact('Category'));
+        $data['categories'] = Category::orderBy('id','desc')->paginate(10);
+        return view('categories.show',compact('Category'), $data);
     }
 
 
     public function edit(Category $Category)
     {
-        return view('categories.edit',compact('Category'));
+        $data['categories'] = Category::orderBy('id','desc')->paginate(10);
+        return view('categories.edit',compact('Category'), $data);
     }
 
 
