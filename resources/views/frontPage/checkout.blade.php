@@ -196,33 +196,6 @@
                                         <li><a href="coming-soon.html">Coming Soon Page</a></li>
                                     </ul>
                                 </li>
-                                <li class="dropdown "><a href="#">Blog <i class="ion-ios-arrow-down"></i></a>
-                                    <ul class="sub-menu">
-                                        <li class="dropdown position-static"><a href="blog-grid-left-sidebar.html">Blog Grid
-                                            <i class="ion-ios-arrow-right"></i></a>
-                                            <ul class="sub-menu sub-menu-2">
-                                                <li><a href="blog-grid-left-sidebar.html">Blog Grid Left Sidebar</a></li>
-                                                <li><a href="blog-grid-right-sidebar.html">Blog Grid Right Sidebar</a></li>
-                                            </ul>
-                                        </li>
-                                        <li class="dropdown position-static"><a href="blog-list-left-sidebar.html">Blog List
-                                            <i class="ion-ios-arrow-right"></i></a>
-                                            <ul class="sub-menu sub-menu-2">
-                                                <li><a href="blog-list-left-sidebar.html">Blog List Left Sidebar</a></li>
-                                                <li><a href="blog-list-right-sidebar.html">Blog List Right Sidebar</a></li>
-                                            </ul>
-                                        </li>
-                                        <li class="dropdown position-static"><a href="blog-single-left-sidebar.html">Single
-                                            Blog <i class="ion-ios-arrow-right"></i></a>
-                                            <ul class="sub-menu sub-menu-2">
-                                                <li><a href="blog-single-left-sidebar.html">Single Blog Left Sidebar</a>
-                                                </li>
-                                                <li><a href="blog-single-right-sidebar.html">Single Blog Right Sidebar</a>
-                                                </li>
-                                            </ul>
-                                        </li>
-                                    </ul>
-                                </li>
                                 <li><a href="contact.html">Contact us</a></li>
                             </ul>
                         </div>
@@ -234,73 +207,6 @@
     </div>
     <!-- Header Area End  -->
 
-    <!-- OffCanvas Cart Start -->
-    <div id="offcanvas-cart" class="offcanvas offcanvas-cart">
-        <div class="inner">
-            <div class="head">
-                <span class="title">Cart</span>
-                <button class="offcanvas-close">×</button>
-            </div>
-            <div class="body customScroll">
-                <ul class="minicart-product-list">
-                    <li>
-                        <a href="single-product.html" class="image"><img src="assets/images/product-image/1.jpg" alt="Cart product Image"></a>
-                        <div class="content">
-                            <a href="single-product.html" class="title">Walnut Cutting Board</a>
-                            <span class="quantity-price">1 x <span class="amount">$91.86</span></span>
-                            <a href="#" class="remove">×</a>
-                        </div>
-                    </li>
-                    <li>
-                        <a href="single-product.html" class="image"><img src="assets/images/product-image/2.jpg" alt="Cart product Image"></a>
-                        <div class="content">
-                            <a href="single-product.html" class="title">Lucky Wooden Elephant</a>
-                            <span class="quantity-price">1 x <span class="amount">$453.28</span></span>
-                            <a href="#" class="remove">×</a>
-                        </div>
-                    </li>
-                    <li>
-                        <a href="single-product.html" class="image"><img src="assets/images/product-image/3.jpg" alt="Cart product Image"></a>
-                        <div class="content">
-                            <a href="single-product.html" class="title">Fish Cut Out Set</a>
-                            <span class="quantity-price">1 x <span class="amount">$87.34</span></span>
-                            <a href="#" class="remove">×</a>
-                        </div>
-                    </li>
-                </ul>
-            </div>
-            <div class="foot">
-                <div class="sub-total">
-                    <table class="table">
-                        <tbody>
-                            <tr>
-                                <td class="text-left">Sub-Total :</td>
-                                <td class="text-right">$523.30</td>
-                            </tr>
-                            <tr>
-                                <td class="text-left">Eco Tax (-2.00) :</td>
-                                <td class="text-right">$4.52</td>
-                            </tr>
-                            <tr>
-                                <td class="text-left">VAT (20%) :</td>
-                                <td class="text-right">$104.66</td>
-                            </tr>
-                            <tr>
-                                <td class="text-left">Total :</td>
-                                <td class="text-right theme-color">$632.48</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-                <div class="buttons">
-                    <a href="cart.html" class="btn btn-dark btn-hover-primary mb-6">view cart</a>
-                    <a href="checkout.html" class="btn btn-outline-dark current-btn">checkout</a>
-                </div>
-                <p class="minicart-message">Free Shipping on All Orders Over $100!</p>
-            </div>
-        </div>
-    </div>
-    <!-- OffCanvas Cart End -->
 
     <!-- OffCanvas Menu Start -->
     <div id="offcanvas-mobile-menu" class="offcanvas offcanvas-mobile-menu">
@@ -310,60 +216,10 @@
             <div class="offcanvas-menu mb-4">
                 <ul>
                     <li><a href="#"><span class="menu-text">Home</span></a>
-                        <ul class="sub-menu">
-                            <li><a href="index.html"><span class="menu-text">Home 1</span></a></li>
-                            <li><a href="index-2.html"><span class="menu-text">Home 2</span></a></li>
-                        </ul>
+                        <ul class="sub-menu"> <li><a href="index.html"><span class="menu-text">Home 1</span></a></li> </ul>
                     </li>
                     <li><a href="about.html">About Us</a></li>
-                    <li><a href="#"><span class="menu-text">Shop</span></a>
-                        <ul class="sub-menu">
-                            <li>
-                                <a href="#"><span class="menu-text">Shop Page</span></a>
-                                <ul class="sub-menu">
-                                    <li><a href="shop-3-column.html">Shop 3 Column</a></li>
-                                    <li><a href="shop-4-column.html">Shop 4 Column</a></li>
-                                    <li><a href="shop-left-sidebar.html">Shop Grid Left Sidebar</a></li>
-                                    <li><a href="shop-right-sidebar.html">Shop Grid Right Sidebar</a></li>
-                                </ul>
-                            </li>
-                            <li>
-                                <a href="#"><span class="menu-text">product Details Page</span></a>
-                                <ul class="sub-menu">
-                                    <li><a href="single-product.html">Product Single</a></li>
-                                    <li><a href="single-product-variable.html">Product Variable</a></li>
-                                    <li><a href="single-product-affiliate.html">Product Affiliate</a></li>
-                                    <li><a href="single-product-group.html">Product Group</a></li>
-                                    <li><a href="single-product-tabstyle-2.html">Product Tab 2</a></li>
-                                    <li><a href="single-product-tabstyle-3.html">Product Tab 3</a></li>
-                                </ul>
-                            </li>
-                            <li>
-                                <a href="#"><span class="menu-text">Single Product Page</span></a>
-                                <ul class="sub-menu">
-                                    <li><a href="single-product-slider.html">Product Slider</a></li>
-                                    <li><a href="single-product-gallery-left.html">Product Gallery Left</a>
-                                    </li>
-                                    <li><a href="single-product-gallery-right.html">Product Gallery Right</a>
-                                    </li>
-                                    <li><a href="single-product-sticky-left.html">Product Sticky Left</a></li>
-                                    <li><a href="single-product-sticky-right.html">Product Sticky Right</a></li>
-                                </ul>
-                            </li>
-                            <li>
-                                <a href="#"><span class="menu-text">Other Pages</span></a>
-                                <ul class="sub-menu">
-                                    <li><a href="cart.html">Cart Page</a></li>
-                                    <li><a href="checkout.html">Checkout Page</a></li>
-                                    <li><a href="compare.html">Compare Page</a></li>
-                                    <li><a href="wishlist.html">Wishlist Page</a></li>
-                                    <li><a href="my-account.html">Account Page</a></li>
-                                    <li><a href="login.html">Login & Register Page</a></li>
-                                    <li><a href="empty-cart.html">Empty Cart Page</a></li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </li>
+                    <li><a href="#"><span class="menu-text">Shop</span></a></li>
                     <li><a href="contact.html">Contact Us</a></li>
                 </ul>
             </div>
@@ -427,139 +283,132 @@
                     <div class="billing-info-wrap">
                         <h3>Billing Details</h3>
                         <div class="row">
-                            <div class="col-lg-6 col-md-6">
-                                <div class="billing-info mb-4">
-                                    <label>First Name</label>
-                                    <input type="text" />
+                            
+                            <form action="{{ route('order.store') }}" method="POST" enctype="multipart/form-data">
+                                @csrf
+                                
+                                <input type="hidden" name="product_id" value="{{  $product->id }}">
+                                <input type="hidden" name="user_id" value="1">
+                                <input type="hidden" name="total_price" value="{{  $product->price }}">
+    
+                                <div class="col-lg-12">
+                                    <div class="billing-info mb-4">
+                                        <label>Name</label>
+                                        <input type="text"  placeholder="name" name="name"/>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="col-lg-6 col-md-6">
-                                <div class="billing-info mb-4">
-                                    <label>Last Name</label>
-                                    <input type="text" />
+                                <div class="col-lg-12">
+                                    <div class="billing-info mb-4">
+                                        <label> Address</label>
+                                        <input class="billing-address" placeholder="Address" type="text" name="adress" />
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="col-lg-12">
-                                <div class="billing-info mb-4">
-                                    <label>Company Name</label>
-                                    <input type="text" />
+    
+                                <div class="col-lg-12">
+                                    <div class="billing-info mb-4">
+                                        <label>Email</label>
+                                        <input class="billing-address" placeholder="Email" type="email" name="email" />
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="col-lg-12">
-                                <div class="billing-select mb-4">
-                                    <label>Country</label>
-                                    <select>
-                                        <option>Select a country</option>
-                                        <option>Azerbaijan</option>
-                                        <option>Bahamas</option>
-                                        <option>Bahrain</option>
-                                        <option>Bangladesh</option>
-                                        <option>Barbados</option>
-                                    </select>
+    
+                                <div class="col-lg-6 col-md-6">
+                                    <div class="billing-info mb-4">
+                                        <label>Phone</label>
+                                        <input type="text" placeholder="Phone" name="phone" />
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="col-lg-12">
-                                <div class="billing-info mb-4">
-                                    <label>Street Address</label>
-                                    <input class="billing-address" placeholder="House number and street name" type="text" />
+                                
+                                
+                                <div class="col-lg-6">
+                                    <div class="billing-info mb-4">
+                                        <label>City</label>
+                                        <input type="text" placeholder="City" name="city" />
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="col-lg-12">
-                                <div class="billing-info mb-4">
-                                    <label>Town / City</label>
-                                    <input type="text" />
+                                <div class="col-lg-6 col-md-6">
+                                    <div class="billing-info mb-4">
+                                        <label>County</label>
+                                        <input type="text" placeholder="County" name="country" />
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="col-lg-6 col-md-6">
-                                <div class="billing-info mb-4">
-                                    <label>State / County</label>
-                                    <input type="text" />
+                                <div class="col-lg-6 col-md-6">
+                                    <div class="billing-info mb-4">
+                                        <label>Postal Code</label>
+                                        <input type="text" placeholder="Code Postal" name="postal_code" />
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="col-lg-6 col-md-6">
-                                <div class="billing-info mb-4">
-                                    <label>Postcode / ZIP</label>
-                                    <input type="text" />
-                                </div>
-                            </div>
-                            <div class="col-lg-6 col-md-6">
-                                <div class="billing-info mb-4">
-                                    <label>Phone</label>
-                                    <input type="text" />
-                                </div>
-                            </div>
-                            <div class="col-lg-6 col-md-6">
-                                <div class="billing-info mb-4">
-                                    <label>Email Address</label>
-                                    <input type="text" />
-                                </div>
+                                <button type="submit" class="btn-hover" >Place Order</button>
+
+                            </form>
+
+
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-lg-5 mt-md-30px mt-lm-30px ">
-                    <div class="your-order-area">
-                        <h3>Your order</h3>
-                        <div class="your-order-wrap gray-bg-4">
-                            <div class="your-order-product-info">
-                                <div class="your-order-top">
-                                    <ul>
-                                        <li>Product</li>
-                                        <li>Total</li>
-                                    </ul>
+                    <div class="col-lg-5 mt-md-30px mt-lm-30px ">
+                        <div class="your-order-area">
+                            <h3>Your order</h3>
+                            <div class="your-order-wrap gray-bg-4">
+                                <div class="your-order-product-info">
+                                    <div class="your-order-top">
+                                        <ul>
+                                            <li>Product</li>
+                                            <li>Total</li>
+                                        </ul>
+                                    </div>
+                                    <div class="your-order-middle">
+                                        <ul>
+                                            <li><span class="order-middle-left">Product Name X 1</span> <span class="order-price">$ {{ $product->price }} </span></li>
+                                        </ul>
+                                    </div>
+                                    <div class="your-order-bottom">
+                                        <ul>
+                                            <li class="your-order-shipping">Shipping</li>
+                                            <li>Free shipping</li>
+                                        </ul>
+                                    </div>
+                                    <div class="your-order-total">
+                                        <ul>
+                                            <li class="order-total">Total</li>
+                                            <li>${{ $product->price }}</li>
+                                        </ul>
+                                    </div>
                                 </div>
-                                <div class="your-order-middle">
-                                    <ul>
-                                        <li><span class="order-middle-left">Product Name X 1</span> <span class="order-price">$ {{ $product->price }} </span></li>
-                                    </ul>
-                                </div>
-                                <div class="your-order-bottom">
-                                    <ul>
-                                        <li class="your-order-shipping">Shipping</li>
-                                        <li>Free shipping</li>
-                                    </ul>
-                                </div>
-                                <div class="your-order-total">
-                                    <ul>
-                                        <li class="order-total">Total</li>
-                                        <li>${{ $product->price }}</li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="payment-method">
-                                <div class="payment-accordion element-mrg">
-                                    <div id="faq" class="panel-group">
-                                        <div class="panel panel-default single-my-account m-0">
-                                            <div class="panel-heading my-account-title">
-                                                <h4 class="panel-title"><a data-bs-toggle="collapse" href="#my-account-1" class="collapsed" aria-expanded="true">Direct bank transfer</a>
-                                                </h4>
-                                            </div>
-                                            <div id="my-account-1" class="panel-collapse collapse show" data-bs-parent="#faq">
-
-                                                <div class="panel-body">
-                                                    <p>Please send a check to Store Name, Store Street, Store Town, Store State / County, Store Postcode.</p>
+                                <div class="payment-method">
+                                    <div class="payment-accordion element-mrg">
+                                        <div id="faq" class="panel-group">
+                                            <div class="panel panel-default single-my-account m-0">
+                                                <div class="panel-heading my-account-title">
+                                                    <h4 class="panel-title"><a data-bs-toggle="collapse" href="#my-account-1" class="collapsed" aria-expanded="true">Direct bank transfer</a>
+                                                    </h4>
+                                                </div>
+                                                <div id="my-account-1" class="panel-collapse collapse show" data-bs-parent="#faq">
+    
+                                                    <div class="panel-body">
+                                                        <p>Please send a check to Store Name, Store Street, Store Town, Store State / County, Store Postcode.</p>
+                                                    </div>
                                                 </div>
                                             </div>
-                                        </div>
-                                        <div class="panel panel-default single-my-account m-0">
-                                            <div class="panel-heading my-account-title">
-                                                <h4 class="panel-title"><a data-bs-toggle="collapse" href="#my-account-2" aria-expanded="false" class="collapsed">Check payments</a></h4>
-                                            </div>
-                                            <div id="my-account-2" class="panel-collapse collapse" data-bs-parent="#faq">
-
-                                                <div class="panel-body">
-                                                    <p>Please send a check to Store Name, Store Street, Store Town, Store State / County, Store Postcode.</p>
+                                            <div class="panel panel-default single-my-account m-0">
+                                                <div class="panel-heading my-account-title">
+                                                    <h4 class="panel-title"><a data-bs-toggle="collapse" href="#my-account-2" aria-expanded="false" class="collapsed">Check payments</a></h4>
+                                                </div>
+                                                <div id="my-account-2" class="panel-collapse collapse" data-bs-parent="#faq">
+    
+                                                    <div class="panel-body">
+                                                        <p>Please send a check to Store Name, Store Street, Store Town, Store State / County, Store Postcode.</p>
+                                                    </div>
                                                 </div>
                                             </div>
-                                        </div>
-                                        <div class="panel panel-default single-my-account m-0">
-                                            <div class="panel-heading my-account-title">
-                                                <h4 class="panel-title"><a data-bs-toggle="collapse" href="#my-account-3">Cash on delivery</a></h4>
-                                            </div>
-                                            <div id="my-account-3" class="panel-collapse collapse" data-bs-parent="#faq">
-
-                                                <div class="panel-body">
-                                                    <p>Please send a check to Store Name, Store Street, Store Town, Store State / County, Store Postcode.</p>
+                                            <div class="panel panel-default single-my-account m-0">
+                                                <div class="panel-heading my-account-title">
+                                                    <h4 class="panel-title"><a data-bs-toggle="collapse" href="#my-account-3">Cash on delivery</a></h4>
+                                                </div>
+                                                <div id="my-account-3" class="panel-collapse collapse" data-bs-parent="#faq">
+    
+                                                    <div class="panel-body">
+                                                        <p>Please send a check to Store Name, Store Street, Store Town, Store State / County, Store Postcode.</p>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
@@ -567,12 +416,8 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="Place-order mt-25">
-                            <a class="btn-hover" href="#">Place Order</a>
-                        </div>
                     </div>
                 </div>
-            </div>
         </div>
     </div>
     <!-- checkout area end -->

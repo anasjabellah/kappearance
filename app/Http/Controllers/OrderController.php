@@ -21,17 +21,26 @@ class OrderController extends Controller
 
     // show contact 
     public function show($id)
-    {     
+    {    
+
         $where = array('id' => $id);
         $Order  = Order::where($where)->first();
-
+        $orderProduct =  $Order['product_id'];
+        
         $data['orderUser'] = Order::join('users', 'user_id', '=', 'users.id')->select('users.*')->get();
-        $data['orderProduct'] = Order::join('products', 'product_id', '=', 'products.id')->select('products.*')->get();
-        
-
+        $data['orderProduct'] = Order::join('products','products.id', '=', 'product_id')->where('product_id', '=',$orderProduct)->select('products.*')->get();
         $data['categories'] = Category::orderBy('id','desc')->paginate(10);
-        
+
         return view('Order.show', compact('Order'), $data);
+    }
+
+
+
+    public function store(Request $request) 
+    {
+        $input = $request->all();
+        Order::create($input);
+        return redirect()->route('front.index')->with('success','Product has been created successfully.');
     }
 
 
@@ -40,7 +49,7 @@ class OrderController extends Controller
     {
         $Order->delete();
         
-        return redirect()->route('Contact.index')
+        return redirect()->route('order.index')
                 ->with('success','Message has been deleted successfully');
     }
 

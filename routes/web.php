@@ -21,9 +21,9 @@ Route::resource('/backend/Setting', SettingController::class);
 Route::resource('/backend/order', OrderController::class);
 Route::get('/backend/Category/{id}/products', [productController::class, 'getProductsCategory']);
 
-// front end 
 
-Route::get('/', [FrontHomeController::class, 'index' , 'GetSetting']);
+// front end 
+Route::get('/', [FrontHomeController::class, 'index' , 'GetSetting'])->name('front.index');
 Route::get('/Category/{id}/products', [FrontHomeController::class, 'getProductsCategory']);
 Route::get('/product/{id}', [FrontHomeController::class, 'getProduct']);
 Route::get('/about', [FrontAboutController::class, 'index']);
