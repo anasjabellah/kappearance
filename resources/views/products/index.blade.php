@@ -103,8 +103,14 @@
 
           <!-- / Navbar -->
 
-
+          
+          
           <div class="container-xxl flex-grow-1 container-p-y">
+            @if ($message = Session::get('success'))
+              <div class="alert alert-success">
+                <p>{{ $message }}</p>
+              </div>
+            @endif
             <h4 class="fw-bold py-3 mb-4"><span class="text-muted fw-light">Table /</span> Product Men</h4>
             <!-- Button trigger modal -->
             <a href="{{ url('backend/products/create') }}" class="btn btn-primary text-bg-dark mb-3"> Add New Product</a>

@@ -140,6 +140,9 @@
                         <div class="col-sm-10">
                             <input class="form-control" type="file" id="formFile" name="image" />
                         </div> 
+                        @error('image')
+                          <div class="alert alert-danger mt-1 mb-1">{{ $message }}</div>
+                        @enderror
                     </div> 
 
                                         
@@ -148,6 +151,9 @@
                         <div class="col-sm-10">
                             <input  name="name"  type="text" class="form-control" id="basic-default-name" placeholder="Enter a name " />
                         </div>
+                        @error('name')
+                          <div class="alert alert-danger mt-1 mb-1">{{ $message }}</div>
+                        @enderror
                     </div>   
 
                   
@@ -161,6 +167,9 @@
                         placeholder="Enter description of the product"
                       ></textarea>
                     </div>
+                    @error('description')
+                      <div class="alert alert-danger mt-1 mb-1">{{ $message }}</div>
+                    @enderror
                   </div>
 
 
@@ -175,6 +184,9 @@
                       aria-label="Amount (to the nearest dollar)"
                     />
                     <span class="input-group-text">.00</span>
+                    @error('price')
+                      <div class="alert alert-danger mt-1 mb-1">{{ $message }}</div>
+                    @enderror
                   </div>
 
                   <div class="input-group mb-4">
@@ -188,6 +200,10 @@
                       aria-label="Amount (to the nearest dollar)"
                     />
                     <span class="input-group-text">.00</span>
+
+                    @error('discount_price')
+                      <div class="alert alert-danger mt-1 mb-1">{{ $message }}</div>
+                    @enderror
                   </div>
 
                    <div class="mb-3">
@@ -202,6 +218,9 @@
                             @endforeach
                         </select>
 
+                        @error('category_id')
+                          <div class="alert alert-danger mt-1 mb-1">{{ $message }}</div>
+                        @enderror
                     </div>
 
                   <div class="row justify-content-end">
