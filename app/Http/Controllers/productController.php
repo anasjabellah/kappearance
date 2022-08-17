@@ -9,10 +9,9 @@ use App\Models\product;
 class productController extends Controller
 {
 
-    public function index(Request $request)
+    public function index()
     {
         $data['categories'] = Category::orderBy('id','desc')->paginate(10);
-
         $data['products'] = Product::orderBy('id','desc')->paginate(10);
         return view('products.index', $data);
     }

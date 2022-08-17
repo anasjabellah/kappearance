@@ -44,6 +44,7 @@
                                 <input type="hidden" name="product_id" value="{{  $product->id }}">
                                 <input type="hidden" name="user_id" value="1">
                                 <input type="hidden" name="total_price" value="{{  $product->price }}">
+                                <input type="hidden" name="quantity" value="1">
     
                                 <div class="col-lg-12">
                                     <div class="billing-info mb-4">

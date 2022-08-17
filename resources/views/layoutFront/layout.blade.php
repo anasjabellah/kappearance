@@ -42,6 +42,10 @@
     <link rel="stylesheet" href="{{ asset('frontEnd/assets/css/plugins/venobox.css') }}" />
     <!-- Main Style -->
     <link rel="stylesheet" href="{{ asset('frontEnd/assets/css/style.css') }}" />
+       <!-- limonte-sweetalert2 -->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" integrity="sha512-c42qTSw/wPZ3/5LBzD+Bw5f7bSF2oxou6wEb+I/lqeaKV5FDIfMvvRp772y4jcJLKuGUOpbJMdg/BTl50fJYAw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/11.1.9/sweetalert2.min.css" integrity="sha512-cyIcYOviYhF0bHIhzXWJQ/7xnaBuIIOecYoPZBgJHQKFPo+TOBA+BY1EnTpmM8yKDU4ZdI3UGccNGCEUdfbBqw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/11.1.9/sweetalert2.all.min.js" integrity="sha512-IZ95TbsPTDl3eT5GwqTJH/14xZ2feLEGJRbII6bRKtE/HC6x3N4cHye7yyikadgAsuiddCY2+6gMntpVHL1gHw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 </head>
 <body>
 
@@ -76,18 +80,18 @@
                                 <button class="dropdown-toggle header-action-btn" data-bs-toggle="dropdown"><i
                                         class="icon-user"></i></button>
                                 <ul class="dropdown-menu dropdown-menu-right">
-                                    <li><a class="dropdown-item" href="my-account.html">My account</a></li>
-                                    <li><a class="dropdown-item" href="checkout.html">Checkout</a></li>
-                                    <li><a class="dropdown-item" href="login.html">Sign in</a></li>
+                                    <li><a class="dropdown-item" href="{{ url('') }}">My account</a></li>
+                                    <li><a class="dropdown-item" href="{{ url('/') }}">Checkout</a></li>
+                                    <li><a class="dropdown-item" href="login.html">{{ url('/login')}}</a></li>
                                 </ul>
                             </div>
                             <!-- Single Wedge End -->
-                            <a href="#offcanvas-cart" class="header-action-btn header-action-btn-cart offcanvas-toggle pr-0">
+                            <a href="{{ url('/cart') }}" class="header-action-btn header-action-btn-cart  pr-0">
                                 <i class="icon-handbag"></i>
-                                <span class="header-action-num">01</span>
+                                <span class="header-action-num">{{ count((array) session('cart')) }}</span>
                                 <!-- <span class="cart-amount">€30.00</span> -->
                             </a>
-                            <a href="#offcanvas-mobile-menu" class="header-action-btn header-action-btn-menu offcanvas-toggle d-lg-none">
+                            <a href="" class="header-action-btn header-action-btn-menu offcanvas-toggle d-lg-none">
                                 <i class="icon-menu"></i>
                             </a>
                         </div>
@@ -127,18 +131,17 @@
                                 <button class="dropdown-toggle header-action-btn" data-bs-toggle="dropdown"><i
                                         class="icon-user"></i></button>
                                 <ul class="dropdown-menu dropdown-menu-right">
-                                    <li><a class="dropdown-item" href="my-account.html">My account</a></li>
-                                    <li><a class="dropdown-item" href="checkout.html">Checkout</a></li>
-                                    <li><a class="dropdown-item" href="login.html">Sign in</a></li>
+                                    <li><a class="dropdown-item" href="{{ url('') }}">My account</a></li>
+                                    <li><a class="dropdown-item" href="{{ url('/') }}">Checkout</a></li>
+                                    <li><a class="dropdown-item" href="login.html">{{ url('/login')}}</a></li>
                                 </ul>
                             </div>
                             <!-- Single Wedge End -->
-                            <a href="#offcanvas-cart" class="header-action-btn header-action-btn-cart offcanvas-toggle pr-0">
+                            <a href="" class="header-action-btn header-action-btn-cart offcanvas-toggle pr-0">
                                 <i class="icon-handbag"></i>
-                                <span class="header-action-num">01</span>
-                                <!-- <span class="cart-amount">€30.00</span> -->
+                                <span class="header-action-num">{{ count((array) session('cart')) }}</span>
                             </a>
-                            <a href="#offcanvas-mobile-menu" class="header-action-btn header-action-btn-menu offcanvas-toggle d-lg-none">
+                            <a href="" class="header-action-btn header-action-btn-menu offcanvas-toggle d-lg-none">
                                 <i class="icon-menu"></i>
                             </a>
                         </div>
@@ -163,7 +166,7 @@
                                         <li class="d-flex">
                                             <ul class="d-block">
                                                 @foreach ($categories as $category)
-                                                    <li class="title"><a href="/Category/{{ url($category->id ) }}/products">{{ $category->name }}</a></li>
+                                                    <li class="title"><a href="/Category/{{ $category->id  }}/products">{{ $category->name }}</a></li>
                                                 @endforeach
                                             </ul>
                                         </li>
@@ -189,13 +192,17 @@
 
             <div class="offcanvas-menu mb-4">
                 <ul>
-                    <li><a href="#"><span class="menu-text">Home</span></a></li>
-                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="{{ url('/') }}"><span class="menu-text">Home</span></a></li>
+                    <li><a href="{{ url('/about') }}">About Us</a></li>
                     <li><a href="#"><span class="menu-text">Shop</span></a>
                         <ul class="sub-menu">
-                            <li><a href="shop-3-column.html">Shop 3 Column</a></li>
-                        </li>
-                    <li><a href="contact.html">Contact Us</a></li>
+                            @foreach ($categories as $category)
+                               <li><a href="/Category/{{ $category->id  }}/products">{{ $category->name }}</a></li>
+                            @endforeach
+                        </ul>
+                    </li>
+
+                    <li><a href="{{ url('/Contact') }}">Contact Us</a></li>
                 </ul>
             </div>
             <!-- OffCanvas Menu End -->
@@ -203,6 +210,19 @@
     </div>
     <!-- OffCanvas Menu End -->
 
+    
+    
+    @if(session('success'))
+    <script>
+        Swal.fire({
+            position: 'top-end',
+            icon: 'success',
+            title: "{{ session('success') }}",
+            showConfirmButton: false,
+            timer: 2500
+        })
+    </script>
+    @endif
 
     @yield('content')
 
@@ -330,6 +350,10 @@
     <script src="{{ asset('frontEnd/assets/js/vendor/vendor.min.js') }}"></script>
     <script src="{{ asset('frontEnd/assets/js/plugins/plugins.min.js') }}"></script>
     <script src="{{ asset('frontEnd/assets/js/main.js') }}"></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 
 </body>
 </html>

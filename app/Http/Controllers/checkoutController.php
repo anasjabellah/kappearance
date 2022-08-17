@@ -14,6 +14,7 @@ class checkoutController extends Controller
 
         $where = array('id' => $id);
         $data['product']  = product::where($where)->first();
+        $data['categories'] = Category::orderBy('id','desc')->paginate(10);
 
         return view('frontPage.checkout', $data );
     }

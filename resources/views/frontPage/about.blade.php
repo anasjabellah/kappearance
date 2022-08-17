@@ -33,7 +33,7 @@
             <div class="row align-items-center">
                 <div class="col-lg-6">
                     <div class="about-left-image mb-md-30px mb-lm-30px" data-aos="fade-up">
-                        <img src="{{ url('images') }}/K-appearance.png" alt="K-appearance" class="img-responsive w-100" />
+                        <img src="{{ url('images') }}/Kappearance1.png" alt="K-appearance" class="img-responsive w-100" />
                     </div>
                 </div>
                 <div class="col-lg-6">
