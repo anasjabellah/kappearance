@@ -50,7 +50,7 @@
                                 <span class="sub-title">Phone:</span>
                             </div>
                             <div class="contact-info-dec">
-                                <p><a href="tel:+012345678102">{{ $Setting->phone }}</a></p>
+                                <p>{{ $Setting->phone }}</p>
                             </div>
                         </div>
                         <div class="single-contact-info" data-aos="fade-up" data-aos-delay="200">

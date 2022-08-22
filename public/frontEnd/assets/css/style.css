@@ -12972,7 +12972,7 @@ input {
 }
 
 .header-bottom {
-  background-color: transparent;
+  background-color: #e9ebea ;
   padding: 29px 0;
 }
 @media only screen and (min-width: 768px) and (max-width: 991px), only screen and (max-width: 767px) {

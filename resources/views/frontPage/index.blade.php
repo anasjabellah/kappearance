@@ -64,7 +64,6 @@
             </div>
         </div>
     </div>
-
     <!-- Product Category End -->
 
     <!-- Product tab Area Start -->
@@ -96,16 +95,8 @@
                                             <span class="badges">
                                                 <span class="new">New</span>
                                             </span>
-                                            <div class="actions">
-                                                <a href="wishlist.html" class="action wishlist" title="Wishlist"><i
-                                                        class="icon-heart"></i></a>
-                                                <a href="#" class="action quickview" data-link-action="quickview" title="Quick view" data-bs-toggle="modal" data-bs-target="#exampleModal"><i
-                                                        class="icon-size-fullscreen"></i></a>
-                                                <a href="compare.html" class="action compare" title="Compare"><i
-                                                        class="icon-refresh"></i></a>
-                                            </div>
-                                            <button title="Add To Cart" class=" add-to-cart">Add
-                                                To Cart</button>
+                                            <a href="{{ route('add.to.cart', $product->id) }}" title="Add To Cart" class=" add-to-cart">Add
+                                                To Cart</a>
                                         </div>
                                         <div class="content">
                                             <h5 class="title"><a href="/product/{{ $product->id }}">{{ $product->name }}</a></h5>
@@ -114,7 +105,7 @@
                                             </span>
                                         </div>
                                     </div>
-                                </div>
+                                </div> 
                                 @endforeach
                             </div>
                         </div>
@@ -126,6 +117,7 @@
         </div>
     </div>
     <!-- Product tab Area End -->
+
 
     <!-- Banner Section Start -->
     <div class="section pb-100px pt-100px">
@@ -152,6 +144,8 @@
         </div>
     </div>
     <!-- Banner Section End -->
+
+
     <!--  Blog area Start -->
     <div class="main-blog-area pb-100px">
         <div class="container">
@@ -170,11 +164,11 @@
                 <div class="swiper-wrapper">
                     <div class="single-blog swiper-slide">
                         <div class="blog-image">
-                            <a href="blog-single-left-sidebar.html"><img src="assets/images/blog-image/1.jpg" class="img-responsive w-100" alt=""></a>
+                            <a href="blog-single-left-sidebar.html"><img src="{{ url('images') }}/September.jpg" class="img-responsive w-100" alt=""></a>
                         </div>
                         <div class="blog-text">
                             <div class="blog-athor-date">
-                                <a class="blog-date" href="#">14 November</a>
+                                <a class="blog-date" href="#">22 November</a>
                             </div>
                             <h5 class="blog-heading"><a class="blog-heading-link" href="blog-single-left-sidebar.html">Interior design is the art.</a></h5>
                             <p class="blog-detail-text">Lorem ipsum dolor sit amet, consectetur adipi elit, sed do eiusmod tempor incididu ut labore et dolore magna aliqua.</p>
@@ -185,7 +179,7 @@
                     <!-- End single blog -->
                     <div class="single-blog swiper-slide">
                         <div class="blog-image">
-                            <a href="blog-single-left-sidebar.html"><img src="assets/images/blog-image/2.jpg" class="img-responsive w-100" alt=""></a>
+                            <a href="blog-single-left-sidebar.html"><img src="{{ url('images') }}/September7.png" class="img-responsive w-100" alt=""></a>
                         </div>
                         <div class="blog-text">
                             <div class="blog-athor-date">
@@ -200,11 +194,11 @@
                     <!-- End single blog -->
                     <div class="single-blog swiper-slide">
                         <div class="blog-image">
-                            <a href="blog-single-left-sidebar.html"><img src="assets/images/blog-image/3.jpg" class="img-responsive w-100" alt=""></a>
+                            <a href="blog-single-left-sidebar.html"><img src="{{ url('images') }}/Untitled3.png" class="img-responsive w-100" alt=""></a>
                         </div>
                         <div class="blog-text">
                             <div class="blog-athor-date">
-                                <a class="blog-date" href="#">14 November</a>
+                                <a class="blog-date" href="#">09 November</a>
                             </div>
                             <h5 class="blog-heading"><a class="blog-heading-link" href="blog-single-left-sidebar.html">Spatialize with that the furns.</a></h5>
                             <p class="blog-detail-text">Lorem ipsum dolor sit amet, consectetur adipi elit, sed do eiusmod tempor incididu ut labore et dolore magna aliqua.</p>
@@ -215,7 +209,7 @@
                     <!-- End single blog -->
                     <div class="single-blog swiper-slide">
                         <div class="blog-image">
-                            <a href="blog-single-left-sidebar.html"><img src="assets/images/blog-image/4.jpg" class="img-responsive w-100" alt=""></a>
+                            <a href="blog-single-left-sidebar.html"><img src="{{ url('images') }}/Untitled4.png" class="img-responsive w-100" alt=""></a>
                         </div>
                         <div class="blog-text">
                             <div class="blog-athor-date">
@@ -239,55 +233,6 @@
     </div>
     <!--  Blog area End -->
 
-    <!-- Instagram Area Start -->
-    <div class="section pb-100px">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12" data-aos="fade-up">
-                    <div class="section-title text-center mb-11">
-                        <h2 class="title">Follow Us Instagram</h2>
-                        <p class="sub-title">Torem ipsum dolor sit amet, consectetur adipisicing elitsed do eiusmo tempor incididunt ut labore</p>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <!-- Single Item -->
-                <div class="col-lg-3 col-md-6 col-sm-6 mb-md-30px mb-lm-30px" data-aos="fade-up" data-aos-delay="200">
-                    <div class="insta-wrapper">
-                        <a href="https://www.instagram.com/" target="_blank"><img class="w-100" src="assets/images/instragram-image/1.png" alt="">
-
-                        </a>
-                    </div>
-                </div>
-                <!-- Single Item -->
-                <div class="col-lg-3 col-md-6 col-sm-6 mb-md-30px mb-lm-30px" data-aos="fade-up" data-aos-delay="400">
-                    <div class="insta-wrapper">
-                        <a href="https://www.instagram.com/" target="_blank"><img class="w-100" src="assets/images/instragram-image/2.png" alt="">
-
-                        </a>
-                    </div>
-                </div>
-                <!-- Single Item -->
-                <div class="col-lg-3 col-md-6 col-sm-6 mb-xs-30px" data-aos="fade-up" data-aos-delay="600">
-                    <div class="insta-wrapper">
-                        <a href="https://www.instagram.com/" target="_blank"><img class="w-100" src="assets/images/instragram-image/3.png" alt="">
-
-                        </a>
-                    </div>
-                </div>
-                <!-- Single Item -->
-                <div class="col-lg-3 col-md-6 col-sm-6 " data-aos="fade-up" data-aos-delay="800">
-                    <div class="insta-wrapper">
-                        <a href="https://www.instagram.com/" target="_blank"><img class="w-100" src="assets/images/instragram-image/4.png" alt="">
-
-                        </a>
-                    </div>
-                </div>
-                <!-- Single Item -->
-            </div>
-        </div>
-    </div>
-    <!-- Instagram Area End -->
-
+    
 
 @endsection
